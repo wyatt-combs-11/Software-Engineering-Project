@@ -26,20 +26,32 @@ con.query("SELECT * FROM login", (err, rows) => {
     me = rows[0].userName;
 })
 
-const http = require('http');
-
-const hostname = '127.0.0.1';
-const port = 3000;
+const http = require('http')
+const fs = require('fs')
 
 const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end(me);
-});
+  res.writeHead(200, { 'content-type': 'text/html' })
+  fs.createReadStream('app.html').pipe(res)
+})
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+
+server.listen(process.env.PORT || 3000)
+
+
+// const http = require('http');
+
+// const hostname = '127.0.0.1';
+// const port = 3000;
+
+// const server = http.createServer((req, res) => {
+//   res.statusCode = 200;
+//   res.setHeader('Content-Type', 'text/plain');
+//   res.end(me);
+// });
+
+// server.listen(port, hostname, () => {
+//   console.log(`Server running at http://${hostname}:${port}/`);
+// });
 
 
 con.end((err) => {
