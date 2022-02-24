@@ -1,0 +1,53 @@
+.mainTitle {
+    text-align: center;
+    font-size: 50px;
+}
+
+#titleDiv {
+    text-align: center;
+    padding: 2px;
+    background-color: lightblue;
+    display: inline-flex;
+    width: 100%;
+}
+
+#workoutDiv {
+    display: inline;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: navy;
+}
+
+#logo {
+    height: 100px;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: blue;
+}
+
+#logIn {
+    text-align: right;
+}
