@@ -1,3 +1,6 @@
+html {
+    background-color: gray;
+}
 .mainTitle {
     text-align: center;
     font-size: 50px;
@@ -54,7 +57,14 @@ background-color: blue;
 
 div.row {
     float: left;
+    transition-duration: 1s;
 }
+
+div.row:hover {
+    transform: rotateZ(360deg);
+}
+
+
 
 div.card {
     background-color: lightblue;
