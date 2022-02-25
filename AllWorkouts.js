@@ -2,14 +2,17 @@
 
 $(document).ready(function(){
 
+    $("#description").hide();
     console.log("JQUERY IS WORKING?");
     
     $("#test").mouseenter(function(){
-        $("#h3").hide();
+        $("#exercise").hide();
+        $("#description").show();
     })
 
     $("#test").mouseleave(function() {
-        $("#h3").show();
+        $("#exercise").show();
+        $("#description").hide();
     })
 
   });
