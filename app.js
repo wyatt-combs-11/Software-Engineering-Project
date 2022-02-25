@@ -16,6 +16,7 @@ con.connect((err) => {
     }
     console.log("Sucessfully connected");
 });
+
 let me;
 
 con.query("SELECT * FROM login", (err, rows) => {
