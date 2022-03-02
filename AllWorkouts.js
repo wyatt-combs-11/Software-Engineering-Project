@@ -12,8 +12,6 @@ $(document).ready(function(){
     $("#5kD").hide();
     $("#halfD").hide();
     $("#marathonD").hide();
-
-    console.log("JQUERY IS WORKING?");
     
     $("#test").mouseenter(function(){
         $("#exercise").hide();
