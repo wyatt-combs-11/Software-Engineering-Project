@@ -1,0 +1,19 @@
+
+
+#steps {
+    width: 200px;
+    height: auto;
+}
+
+
+li {
+    margin-top: 15px;
+}
+
+
+/* APPLY TO UL ELEMENTS */
+.steps {
+    color: aliceblue;
+    font-size: 30px;
+
+}
