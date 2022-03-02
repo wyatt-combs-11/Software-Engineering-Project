@@ -34,7 +34,7 @@ ul {
     margin-right: 10px;
 }
 
-#exercise {
+.exerciseIMG {
     height: 75px;
     width: auto;
     margin-top: 10px;
@@ -54,6 +54,7 @@ text-align: center;
 padding: 14px 16px;
 text-decoration: none;
 }
+
 
 li a:hover {
 background-color: blue;
