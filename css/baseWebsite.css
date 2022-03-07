@@ -18,7 +18,7 @@ html {
     display: inline;
 }
 
-ul {
+.heading {
     list-style-type: none;
     margin: 0;
     padding: 0;
