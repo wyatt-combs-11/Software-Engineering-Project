@@ -1,5 +1,5 @@
 html {
-    background-color: gray;
+    background-color: rgb(56, 56, 56);
 }
 .mainTitle {
     text-align: center;
@@ -9,7 +9,7 @@ html {
 #titleDiv {
     text-align: center;
     padding: 2px;
-    background-color: lightblue;
+    background-color: rgb(31, 31, 31);
     display: inline-flex;
     width: 100%;
 }
@@ -19,7 +19,7 @@ html {
 }
 
 h1{
-    color: black;
+    color: white;
 }
 
 ul {
@@ -27,7 +27,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: navy;
+    background-color: rgb(65, 34, 100);
 }
 
 #logo {
@@ -60,7 +60,7 @@ text-decoration: none;
 }
 
 li a:hover {
-background-color: blue;
+background-color: rgb(104, 72, 141);
 }
 
 #logIn {
@@ -79,8 +79,8 @@ div.row:hover {
 
 
 div.card {
-    background-color: lightblue;
-    color:blue;
+    background-color: rgb(133, 106, 165);
+    color:rgb(22, 22, 22);
     border-radius: 5px;
     margin: 50px;
     width: 150px;
