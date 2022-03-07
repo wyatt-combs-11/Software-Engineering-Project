@@ -5,9 +5,21 @@
         <title> All Workouts </title>
         <script src="jquery/jquery.js"></script>
         <script src="AllWorkouts.js"></script>
-        <link rel="stylesheet" href="baseWebsite.css">
+        <link id="theme" rel="stylesheet" href="baseWebsite.css">
         <meta charset="UTF-8">
 </head>
+
+<script>
+		
+    function ColorChange() {
+        var theme = document.getElementsByTagName('link')[0];
+        if (theme.getAttribute('href') == "baseWebsite.css") {
+            theme.setAttribute('href', "baseWebsiteDark.css");
+        } else {
+            theme.setAttribute('href', "baseWebsite.css");
+        }
+    }
+</script>
 
 <body>
 
@@ -24,6 +36,7 @@
             <li><a href="PullWorkouts.html">Pull Workouts</a></li>
             <li><a href="LegWorkouts.html">Leg Workouts</a></li>
             <li style=float:right><a href="TESTLINK.com">Log In</a></li>
+            <li id = "lightdarkTog" style=float:right><a onclick="ColorChange()">Toggle Light/Dark Mode</a></li>
         </ul>
     </div>
 
