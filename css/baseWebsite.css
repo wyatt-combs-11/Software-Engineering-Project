@@ -18,15 +18,11 @@ html {
     display: inline;
 }
 
-<<<<<<< HEAD:css/baseWebsite.css
-.heading {
-=======
 h1{
     color: black;
 }
 
 ul {
->>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:baseWebsite.css
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -42,8 +38,8 @@ ul {
     margin-right: 10px;
 }
 
-#exercise {
-    height: 75px;
+.exercise {
+    height: 50px;
     width: auto;
     margin-top: 10px;
     margin-left: 10px;
