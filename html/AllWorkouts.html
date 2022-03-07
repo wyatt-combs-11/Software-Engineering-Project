@@ -3,11 +3,23 @@
 
 <head>
         <title> All Workouts </title>
-        <script src="../jquery/jquery.js"></script>
-        <script src="../js/AllWorkouts.js"></script>
-        <link rel="stylesheet" href="../css/baseWebsite.css">
+        <script src="jquery/jquery.js"></script>
+        <script src="AllWorkouts.js"></script>
+        <link id="theme" rel="stylesheet" href="../baseWebsite.css">
         <meta charset="UTF-8">
 </head>
+
+<script>
+		
+    function ColorChange() {
+        var theme = document.getElementsByTagName('link')[0];
+        if (theme.getAttribute('href') == "baseWebsite.css") {
+            theme.setAttribute('href', "baseWebsiteDark.css");
+        } else {
+            theme.setAttribute('href', "baseWebsite.css");
+        }
+    }
+</script>
 
 <body>
 
@@ -24,127 +36,212 @@
             <li><a href="PullWorkouts.html">Pull Workouts</a></li>
             <li><a href="LegWorkouts.html">Leg Workouts</a></li>
             <li style=float:right><a href="TESTLINK.com">Log In</a></li>
+            <li id = "lightdarkTog" style=float:right><a onclick="ColorChange()">Toggle Light/Dark Mode</a></li>
         </ul>
     </div>
 
     <div>  
 
         <a href="TEXT.com">
+<<<<<<< HEAD:html/AllWorkouts.html
             <div id="15HIIT" class="card row">
                 <img id="hiit" class="exerciseIMG" src="../images/test.jpg">
                 <h3 id="hiit" >15 Minute HIIT</h3>
                 <p id="description15">
                     A high Intensity Interval Training that should take 15 mins
+=======
+            <div class="card row">
+                <h3>Some Random Exercise</h3>
+                <p>
+                    Some smaller information about the random exercises
+>>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:AllWorkouts.html
                 </p>
             </div>
         </a>
         
         <a href="RunningExample.html">
             <div id="test" class="card row">
+<<<<<<< HEAD:html/AllWorkouts.html
                 <img id="exercise" class="exerciseIMG" src="../images/test.jpg">
+=======
+                <img id="exercise" src="images/test.jpg">
+>>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:AllWorkouts.html
                 <h3 id="h3" >Running</h3>
                 <p id="description">
-                    A simple guided workout for an evening run
+                    Go out and run you idiots
                 </p>
+                <!-- <p>
+                    Some smaller information about the random exercises
+                </p> -->
             </div>
         </a>
         
         <a href="TEXT.com">
+<<<<<<< HEAD:html/AllWorkouts.html
             <div id="pushdiv" class="card row">
                 <img id="push" class="exerciseIMG" src="../images/test.jpg">
                 <h3 id="pushH" >Push Workout</h3>
                 <p id="pushD">
                     A push day at the gym
+=======
+            <div class="card row">
+                <h3>Some Random Exercise</h3>
+                <p>
+                    Some smaller information about the random exercises
+>>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:AllWorkouts.html
                 </p>
             </div>
         </a>
         
         <a href="TEXT.com">
+<<<<<<< HEAD:html/AllWorkouts.html
             <div id="pulldiv" class="card row">
                 <img id="pull" class="exerciseIMG" src="../images/test.jpg">
                 <h3 id="pullH" >Pull Workout</h3>
                 <p id="pullD">
                     A Pull day at the gym
+=======
+            <div class="card row">
+                <h3>Some Random Exercise</h3>
+                <p>
+                    Some smaller information about the random exercises
+>>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:AllWorkouts.html
                 </p>
             </div>
         </a>
         
         <a href="TEXT.com">
+<<<<<<< HEAD:html/AllWorkouts.html
             <div id="legdiv" class="card row">
                 <img id="leg" class="exerciseIMG" src="../images/test.jpg">
                 <h3 id="legH" >Leg Workout</h3>
                 <p id="legD">
                     Never skip leg day
+=======
+            <div class="card row">
+                <h3>Some Random Exercise</h3>
+                <p>
+                    Some smaller information about the random exercises
+>>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:AllWorkouts.html
                 </p>
             </div>
         </a>
         
         <a href="TEXT.com">
+<<<<<<< HEAD:html/AllWorkouts.html
             <div id="chestdiv" class="card row">
                 <img id="chest" class="exerciseIMG" src="../images/test.jpg">
                 <h3 id="chestH" >Chest Workout</h3>
                 <p id="chestD">
                     Chest Day, my favorite
+=======
+            <div class="card row">
+                <h3>Some Random Exercise</h3>
+                <p>
+                    Some smaller information about the random exercises
+>>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:AllWorkouts.html
                 </p>
             </div>
         </a>
 
         <a href="TEXT.com">
+<<<<<<< HEAD:html/AllWorkouts.html
             <div id="bicepdiv" class="card row">
                 <img id="bicep" class="exerciseIMG" src="../images/test.jpg">
                 <h3 id="bicepH" >Bicep Workout</h3>
                 <p id="bicepD">
                     Guys I am NOT creative
+=======
+            <div class="card row">
+                <h3>Some Random Exercise</h3>
+                <p>
+                    Some smaller information about the random exercises
+>>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:AllWorkouts.html
                 </p>
             </div>
         </a>
         
         <a href="TEXT.com">
+<<<<<<< HEAD:html/AllWorkouts.html
             <div id="crossdiv" class="card row">
                 <img id="cross" class="exerciseIMG" src="../images/test.jpg">
                 <h3 id="crossH" >Crossfit Workout</h3>
                 <p id="crossD">
                     I am gonna be honest, I don't even know what crossfit is 100%
+=======
+            <div class="card row">
+                <h3>Some Random Exercise</h3>
+                <p>
+                    Some smaller information about the random exercises
+>>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:AllWorkouts.html
                 </p>
             </div>
         </a>
         
         <a href="TEXT.com">
+<<<<<<< HEAD:html/AllWorkouts.html
             <div id="calfdiv" class="card row">
                 <img id="calf" class="exerciseIMG" src="../images/test.jpg">
                 <h3 id="calfH" >Calf Exercises</h3>
                 <p id="calfD">
                     I am out of creativity. That is all
+=======
+            <div class="card row">
+                <h3>Some Random Exercise</h3>
+                <p>
+                    Some smaller information about the random exercises
+>>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:AllWorkouts.html
                 </p>
             </div>
         </a>
 
         <a href="TEXT.com">
+<<<<<<< HEAD:html/AllWorkouts.html
             <div id="5kdiv" class="card row">
                 <img id="5k" class="exerciseIMG" src="../images/test.jpg">
                 <h3 id="5kH" >5K Training Plan</h3>
                 <p id="5kD">
                     A guide to training for your first 5k
+=======
+            <div class="card row">
+                <h3>Some Random Exercise</h3>
+                <p>
+                    Some smaller information about the random exercises
+>>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:AllWorkouts.html
                 </p>
             </div>
         </a>
         
         <a href="TEXT.com">
+<<<<<<< HEAD:html/AllWorkouts.html
             <div id="halfdiv" class="card row">
                 <img id="half" class="exerciseIMG" src="../images/test.jpg">
                 <h3 id="halfH" >Half Marathon Training Plan</h3>
                 <p id="halfD">
                     A guide to training for your first Half Marathon
+=======
+            <div class="card row">
+                <h3>Some Random Exercise</h3>
+                <p>
+                    Some smaller information about the random exercises
+>>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:AllWorkouts.html
                 </p>
             </div>
         </a>
         
         <a href="TEXT.com">
+<<<<<<< HEAD:html/AllWorkouts.html
             <div id="marathondiv" class="card row">
                 <img id="marathon" class="exerciseIMG" src="../images/test.jpg">
                 <h3 id="marathonH" >Marathon Training Plan</h3>
                 <p id="marathonD">
                     A guide to training for your first Marathon
+=======
+            <div class="card row">
+                <h3>Some Random Exercise</h3>
+                <p>
+                    Some smaller information about the random exercises
+>>>>>>> fae95af3888a46027f559c96c788a3df2e8eaacd:AllWorkouts.html
                 </p>
             </div>
         </a>
