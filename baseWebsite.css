@@ -1,0 +1,90 @@
+html {
+    background-color: gray;
+}
+.mainTitle {
+    text-align: center;
+    font-size: 50px;
+}
+
+#titleDiv {
+    text-align: center;
+    padding: 2px;
+    background-color: lightblue;
+    display: inline-flex;
+    width: 100%;
+}
+
+#workoutDiv {
+    display: inline;
+}
+
+h1{
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: navy;
+}
+
+#logo {
+    height: 100px;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.exercise {
+    height: 75px;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: blue;
+}
+
+#logIn {
+    text-align: right;
+}
+
+div.row {
+    float: left;
+    transition-duration: 1s;
+}
+
+div.row:hover {
+    transform: rotateZ(360deg);
+}
+
+
+
+div.card {
+    background-color: lightblue;
+    color:blue;
+    border-radius: 5px;
+    margin: 50px;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
