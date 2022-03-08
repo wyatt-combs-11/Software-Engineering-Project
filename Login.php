@@ -3,7 +3,7 @@
     
 <head>
     <title> Log In </title>
-    <link rel="stylesheet" href="baseWebsite.css">
+    <link rel="stylesheet" href="./css/baseWebsite.css">
     <meta charset="UTF-8">
 </head>
 
@@ -17,9 +17,9 @@
 <div id="workoutDiv"> 
     <ul>
         <li><a href="./html/JimBuddies.html">Home Page</a></li>
-        <li><a href="/html/AllWorkouts.html">All Workouts</a></li>
-        <li><a href="/html/ChestWorkouts.html">Chest Workouts</a></li>
-        <li><a href="/html/PullWorkouts.html">Pull Workouts</a></li>
+        <li><a href="./html/AllWorkouts.html">All Workouts</a></li>
+        <li><a href="./html/ChestWorkouts.html">Chest Workouts</a></li>
+        <li><a href="./html/PullWorkouts.html">Pull Workouts</a></li>
         <li><a href="./html/LegWorkouts.html">Leg Workouts</a></li>
         <!-- <li style=float:right><a href="TESTLINK.com">Log In</a></li> -->
     </ul>
