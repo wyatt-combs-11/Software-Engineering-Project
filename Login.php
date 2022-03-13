@@ -47,6 +47,18 @@
             $connection = mysqli_connect('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
             if ($connection) {
                 echo "SUCCESSFULLY CONNECTED";
+                $results = $connection->query("Select * from Users")
+                print '<table border= "1"'>;
+                while($row=$results->fetch_assoc()) {
+                    print '<tr>';
+                    print '<td>'.$row['userId'].'<td>';
+                    print '<td>'.$row['userName'].'<td>';
+                    print '<td>'.$row['password'].'<td>';
+                    print '<td>'.$row['goaldescription'].'<td>';
+                    print '<td>'.$row['age'].'<td>';
+                    print '<tr>'
+                }
+                print '</table>';
             }
         } else {
             echo "Incorrect Username or Password";
