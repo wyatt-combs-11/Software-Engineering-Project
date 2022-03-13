@@ -49,7 +49,7 @@
     }
 
     // Perform query
-    if ($result = $mysqli -> query("SELECT * FROM Users")) {
+    if ($result = $connection -> query("SELECT * FROM Users")) {
        echo "Returned rows are: " . $result -> num_rows;
         // Free result set
         $result -> free_result();
