@@ -41,13 +41,25 @@
     $adminPWord = "ADMIN";
     $uName = $_POST["uname"] ?? null;
     $pWord = $_POST["psword"] ?? null;
+
+    $connection = mysqli_connect('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
+
+    if ($connection -> connect_errno) {
+        echo "NOT CONNECTED";
+    }
+
+    // Perform query
+    if ($result = $mysqli -> query("SELECT * FROM Users")) {
+       echo "Returned rows are: " . $result -> num_rows;
+        // Free result set
+        $result -> free_result();
+    }
+  
+
     if($uName != null || $pWord != null) {
         if($adminUName == $uName && $adminPWord == $pWord) {
             echo "Admin Login Success";
-            $connection = mysqli_connect('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
-            if ($connection -> connect_errno) {
-                echo "NOT CONNECTED";
-            }
+
         } else {
             echo "Incorrect Username or Password";
         }
