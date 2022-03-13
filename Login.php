@@ -44,6 +44,10 @@
     if($uName != null || $pWord != null) {
         if($adminUName == $uName && $adminPWord == $pWord) {
             echo "Admin Login Success";
+            $connection = mysqli_connect('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
+            if ($connection) {
+                echo "SUCCESSFULLY CONNECTED";
+            }
         } else {
             echo "Incorrect Username or Password";
         }
