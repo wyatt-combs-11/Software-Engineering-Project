@@ -53,6 +53,7 @@
        echo "Returned rows are: " . $result -> num_rows;
         // Free result set
         $result -> free_result();
+        console.log($result);
     }
   
 
