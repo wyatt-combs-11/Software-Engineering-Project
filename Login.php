@@ -52,8 +52,10 @@
     if ($result = $connection -> query("SELECT * FROM Users")) {
        echo "Returned rows are: " . $result -> num_rows;
         // Free result set
-        $result -> free_result();
-        console.log($result);
+        while($row = mysqli_fetch_array($result))
+        {
+           print_r($row);
+        } 
     }
   
 
