@@ -45,16 +45,16 @@
         if($adminUName == $uName && $adminPWord == $pWord) {
             echo "Admin Login Success";
             $connection = mysqli_connect('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
-            if ($connection) {
-                echo "SUCCESSFULLY CONNECTED";
-                // Perform query
-                if ($result = $connection -> query('SELECT * FROM Persons')) {
-                    echo "Returned rows are: " . $result -> num_rows;
-                    // Free result set
-                    $result -> free_result();
-                }
+            if ($connection -> connect_errno) {
+                echo "NOT CONNECTED";
+            }
+            if ($result = $connection -> query('SELECT * FROM Persons')) {
+                echo "Returned rows are: " . $result -> num_rows;
+                // Free result set
+                $result -> free_result();
+            }
   
-                $connection -> close();
+            $connection -> close();
             }
         } else {
             echo "Incorrect Username or Password";
