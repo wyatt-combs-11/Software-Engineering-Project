@@ -48,14 +48,6 @@
             if ($connection -> connect_errno) {
                 echo "NOT CONNECTED";
             }
-            if ($result = $connection -> query('SELECT * FROM Persons')) {
-                echo "Returned rows are: " . $result -> num_rows;
-                // Free result set
-                $result -> free_result();
-            }
-  
-            $connection -> close();
-            }
         } else {
             echo "Incorrect Username or Password";
         }
