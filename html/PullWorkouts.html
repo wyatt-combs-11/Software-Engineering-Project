@@ -3,9 +3,23 @@
 
 <head>
         <title> All Workouts </title>
+        <script src="../jquery/jquery.js"></script>
+        <script src="../js/AllWorkouts.js"></script>
         <link rel="stylesheet" href="../css/baseWebsite.css">
         <meta charset="UTF-8">
 </head>
+
+<script>
+		
+    function ColorChange() {
+        var theme = document.getElementsByTagName('link')[0];
+        if (theme.getAttribute('href') == "../css/baseWebsite.css") {
+            theme.setAttribute('href', "../css/baseWebsiteDark.css");
+        } else {
+            theme.setAttribute('href', "../css/baseWebsite.css");
+        }
+    }
+</script>
 
 <body>
 
@@ -21,10 +35,35 @@
             <li><a href="ChestWorkouts.html">Chest Workouts</a></li>
             <li><a href="PushWorkouts.html">Push Workouts</a></li>
             <li><a href="LegWorkouts.html">Leg Workouts</a></li>
-            <li style=float:right><a href="Login.php">Log In</a></li>
+            <li style=float:right><a href="../Login.php">Log In</a></li>
+            <li id = "lightdarkTog" style=float:right><a onclick="ColorChange()">Toggle Light/Dark Mode</a></li>
         </ul>
     </div>
 
+    <div>  
+        
+        <a href="TEXT.com">
+            <div id="pulldiv" class="card row">
+                <img id="pull" class="exercise" src="../images/test.jpg">
+                <h3 id="pullH" >Pull Workout</h3>
+                <p id="pullD">
+                    A Pull day at the gym
+                </p>
+            </div>
+        </a>
+
+        <a href="TEXT.com">
+            <div id="bicepdiv" class="card row">
+                <img id="bicep" class="exercise" src="../images/test.jpg">
+                <h3 id="bicepH" >Bicep Workout</h3>
+                <p id="bicepD">
+                    Guys I am NOT creative
+                </p>
+            </div>
+        </a>
+
+        
+    </div>
 
 
 </body>
