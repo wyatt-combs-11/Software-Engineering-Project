@@ -63,7 +63,6 @@
     if($uName != null || $pWord != null) {
         $sql = "SELECT * FROM Users WHERE username='$uName' AND password='$pWord'";
         $result = mysqli_query($connection, $sql);
-        echo "Returned rows are: " . $result -> num_rows;
         if(mysqli_num_rows($result) === 1) {
             echo "Login Success";
 
