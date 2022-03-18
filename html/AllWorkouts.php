@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+        header("location: login.php");
+        exit;
+    }
+?>
+
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 
 <head>
@@ -35,15 +43,15 @@
             <li><a href="PushWorkouts.html">Push Workouts</a></li>
             <li><a href="PullWorkouts.html">Pull Workouts</a></li>
             <li><a href="LegWorkouts.html">Leg Workouts</a></li>
-            <li style=float:right> <?php
-                if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true){
-                    echo YOU ARE LOGGED IN
-                } else {
-                    echo LOGIN PLEASE
-                }
+            <!-- <li style=float:right> <?php
+                // if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true){
+                //     echo YOU ARE LOGGED IN
+                // } else {
+                //     echo LOGIN PLEASE
+                // }
             ?>
-            <li>
-            <!-- <li style=float:right><a href="../Login.php">Log In</a></li> -->
+            <li> -->
+            <li style=float:right><a href="../Login.php">Log In</a></li>
             <li id = "lightdarkTog" style=float:right><a onclick="ColorChange()">Toggle Light/Dark Mode</a></li>
         </ul>
     </div>
