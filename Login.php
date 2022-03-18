@@ -60,8 +60,9 @@
   
 
     if($uName != null || $pWord != null) {
-        if($adminUName == $uName && $adminPWord == $pWord) {
-            echo "Admin Login Success";
+        $result = $connection -> query ("SELECT * FROM Users WHERE username = " + $uName + "AND password = " + $pWord);
+        if($result -> num_rows === 1) {
+            echo "Login Success";
 
         } else {
             echo "Incorrect Username or Password";
