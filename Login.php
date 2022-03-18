@@ -64,6 +64,10 @@
         $sql = "SELECT * FROM Users WHERE username='$uName' AND password='$pWord'";
         $result = mysqli_query($connection, $sql);
         if(mysqli_num_rows($result) === 1) {
+            session_start();
+            $_SESSION["loggedin"] = true;
+            $_SESSION["username"] = $username;
+            header("location: Allworkouts.html");
             echo "Login Success";
 
         } else {
