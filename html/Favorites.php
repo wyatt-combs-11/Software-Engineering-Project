@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+        header("location: ../Login.php");
+        exit;
+    }
+?>
+
+
 <!-- <!DOCTYPE html> -->
 <html lang="en">
 
@@ -35,7 +44,6 @@
             <li><a href="PushWorkouts.html">Push Workouts</a></li>
             <li><a href="PullWorkouts.html">Pull Workouts</a></li>
             <li><a href="LegWorkouts.html">Leg Workouts</a></li>
-            <li><a href="Favorites.php">Favorited Workouts</a></li>
             <!-- <li style=float:right> 
                 // if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == true){
                 //     echo YOU ARE LOGGED IN
