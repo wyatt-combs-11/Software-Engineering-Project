@@ -49,18 +49,18 @@
     }
 
     // Perform query
-    if ($result = $connection -> query("SELECT * FROM Users")) {
-       //echo "Returned rows are: " . $result -> num_rows;
-        // Free result set
-        while($row = mysqli_fetch_array($result))
-        {
-           //print_r($row);
-        } 
-    }
+    // if ($result = $connection -> query("SELECT * FROM Users")) {
+    //    //echo "Returned rows are: " . $result -> num_rows;
+    //     // Free result set
+    //     while($row = mysqli_fetch_array($result))
+    //     {
+    //        //print_r($row);
+    //     } 
+    // }
   
 
     if($uName != null || $pWord != null) {
-        $result = $connection -> query ("SELECT * FROM Users WHERE username = " + $uName + "AND password = " + $pWord);
+        $result = $connection -> query ("SELECT * FROM Users WHERE username = " + $uName + " AND password = " + $pWord);
         echo $result -> num_rows;
         if($result -> num_rows === 1) {
             echo "Login Success";
