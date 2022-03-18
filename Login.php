@@ -61,7 +61,7 @@
 
     if($uName != null || $pWord != null) {
         $result = $connection -> query ("SELECT * FROM Users WHERE username = " + $uName + " AND password = " + $pWord);
-        echo $result -> num_rows;
+        echo "Returned rows are: " . $result -> num_rows;
         if($result -> num_rows === 1) {
             echo "Login Success";
 
