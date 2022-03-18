@@ -57,12 +57,14 @@
     //        //print_r($row);
     //     } 
     // }
-  
+    
+     
 
     if($uName != null || $pWord != null) {
-        $result = $connection -> query("SELECT * FROM Users WHERE username = " + $uName + " AND password = " + $pWord);
+        $sql = "SELECT * FROM Users WHERE username='$uName' AND password='$pWord'";
+        $result = mysqli_query($connection, $sql);
         echo "Returned rows are: " . $result -> num_rows;
-        if($result -> num_rows === 1) {
+        if(mysqli_num_rows($result) === 1) {
             echo "Login Success";
 
         } else {
