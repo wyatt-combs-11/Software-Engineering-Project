@@ -67,7 +67,7 @@
             session_start();
             $_SESSION["loggedin"] = true;
             $_SESSION["username"] = $username;
-            header("location: Allworkouts.html");
+            header("location: AllWorkouts.html");
             echo "Login Success";
 
         } else {
