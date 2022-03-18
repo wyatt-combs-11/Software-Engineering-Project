@@ -67,7 +67,7 @@
             session_start();
             $_SESSION["loggedin"] = true;
             $_SESSION["username"] = $username;
-            header("location: ./html/AllWorkouts.php");
+            header("location: ./html/Favorites.php");
             echo "Login Success";
 
         } else {
