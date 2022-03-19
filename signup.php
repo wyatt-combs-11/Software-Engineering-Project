@@ -58,7 +58,6 @@
         if ($conection->query($sql)) {
             printf("Record inserted successfully.<br />");
             echo "Login Success";
-            header("Location: Login.php");  
          }
          if ($connectioni→errno) {
             printf("Could not insert record into table: %s<br />", $mysqli→error);
