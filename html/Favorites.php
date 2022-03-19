@@ -49,7 +49,7 @@
             <li style=float:right>
                 <b>
                     <?php 
-                        if ($_SESSION["loggedin"] === 1) {
+                        if ($_SESSION["loggedin"] === true) {
                             echo htmlspecialchars("YOU DID IT");
                         } else {
                             echo htmlspecialchars("YOU DIDNT DO IT");
