@@ -61,9 +61,7 @@
          else ($connectioni->errno) {
             echo "BROKEN";
          }
-         $connection->close();
-
-        
+         mysqli_close($connection);
     }
 ?>
 
