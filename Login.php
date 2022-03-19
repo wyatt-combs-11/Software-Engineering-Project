@@ -17,7 +17,7 @@
 <div id="workoutDiv"> 
     <ul>
         <li><a href="./html/JimBuddies.html">Home Page</a></li>
-        <li><a href="./html/AllWorkouts.html">All Workouts</a></li>
+        <li><a href="./html/AllWorkouts.php">All Workouts</a></li>
         <li><a href="./html/ChestWorkouts.html">Chest Workouts</a></li>
         <li><a href="./html/PullWorkouts.html">Pull Workouts</a></li>
         <li><a href="./html/LegWorkouts.html">Leg Workouts</a></li>
@@ -64,6 +64,10 @@
         $sql = "SELECT * FROM Users WHERE username='$uName' AND password='$pWord'";
         $result = mysqli_query($connection, $sql);
         if(mysqli_num_rows($result) === 1) {
+            session_start();
+            $_SESSION["loggedin"] = true;
+            $_SESSION["username"] = $username;
+            header("location: ./html/Favorites.php");
             echo "Login Success";
 
         } else {
