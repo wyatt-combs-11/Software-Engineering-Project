@@ -55,10 +55,10 @@
     if($uName != null || $pWord != null) {
         $sql = "INSERT INTO Users (username, password, goalDescription, age) VALUES ('test', 'test', 'test', '7')";
         
-        if ($conection->query($sql) === TRUE) {
+        if (mysqli_query($connection, $sql)) {
             echo "Sign UP Success";
          }
-         if ($connectioni->errno) {
+         else ($connectioni->errno) {
             echo "BROKEN";
          }
          $connection->close();
