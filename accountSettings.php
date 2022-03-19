@@ -72,12 +72,12 @@
     }
 
     if($pWord != null) {
-        $sql = "UPDATE 'Users' SET 'password' = '$pWord' WHERE (`username` = '$current');";
+        $sql = "UPDATE 'Users' SET 'password' = '$pWord' WHERE (`userId` = '3');";
         mysqli_query($connection, $sql);
     }
 
     if ($mode != null) {
-        $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE (`username` = '$current');";
+        $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE (`userId` = '3');";
         mysqli_query($connection, $sql);
     }
          
