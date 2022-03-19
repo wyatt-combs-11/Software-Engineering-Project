@@ -1,12 +1,8 @@
 <?php
         session_start();
-        $test = $_SESSION["mode"];
-        $current = $_SESSION["id"];
-        echo "MAYBE";
-        echo $test;
-        echo "$current";
-
+        
         if ($_SESSION["mode"] === 1) {
+            echo "is this happening";
             echo '<script>ColorChange();</script>';
         }
     ?>
