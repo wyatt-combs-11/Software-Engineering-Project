@@ -31,9 +31,6 @@
 </script>
 
 <body>
-
-    <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["loggedin"]); ?></b>. Welcome to our site.</h1>
-
     <div id="titleDiv">
         <img id = "logo" src="../images/Logo.PNG" alt="Jim People Logo">
         <h1 class="mainTitle"> All Workouts</h1>
@@ -46,16 +43,17 @@
             <li><a href="PushWorkouts.html">Push Workouts</a></li>
             <li><a href="PullWorkouts.html">Pull Workouts</a></li>
             <li><a href="LegWorkouts.html">Leg Workouts</a></li>
-            <li style=float:right>
+            <li style=float:right> <a>
                 <b>
                     <?php 
                         if ($_SESSION["loggedin"] === true) {
-                            echo htmlspecialchars("YOU DID IT");
+                            echo htmlspecialchars("Log Out");
                         } else {
-                            echo htmlspecialchars("YOU DIDNT DO IT");
+                            echo htmlspecialchars("Log In");
                         }
                     ?>
-            </li>
+            
+            </a> </li>
             <li style=float:right><a href="../Login.php">Log In</a></li>
             <li id = "lightdarkTog" style=float:right><a onclick="ColorChange()">Toggle Light/Dark Mode</a></li>
         </ul>
