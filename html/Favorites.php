@@ -45,7 +45,7 @@
             <li><a href="PullWorkouts.html">Pull Workouts</a></li>
             <li><a href="LegWorkouts.html">Leg Workouts</a></li>
             <li style=float:right> <?php
-                if($_SESSION["loggedin"] == true){
+                if($_SESSION["loggedin"] === true){
                     echo htmlspecialchars("LOG OUT")
                 } else {
                     echo htmlspecialchars("Log In")
