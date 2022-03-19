@@ -51,6 +51,8 @@
                     <?php 
                         if ($_SESSION["loggedin"] === 1) {
                             echo htmlspecialchars("YOU DID IT");
+                        } else {
+                            echo htmlspecialchars("YOU DIDNT DO IT");
                         }
                     ?>
             </li>
