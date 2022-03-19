@@ -66,7 +66,7 @@
         if(mysqli_num_rows($result) === 1) {
             session_start();
             $_SESSION["loggedin"] = true;
-            $_SESSION["username"] = $username;
+            $_SESSION["username"] = $uName;
             header("location: ./html/Favorites.php");
             echo "Login Success";
 
