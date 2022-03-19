@@ -57,6 +57,11 @@
                     ?>
             
             </a> </li>
+            <?php
+                if ($_SESSION["loggedin" === true]) {
+                    echo "<li style=float:right> <a id='login' href='../accountSettings.php'> Account Settings</a></li>";
+                }
+            ?>
             <li style=float:right> <a id= "login" href="../accountSettings.php">
                 <b>
                     <?php 
