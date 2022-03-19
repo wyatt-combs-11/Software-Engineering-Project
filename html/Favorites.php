@@ -50,7 +50,7 @@
                 <b>
                     <?php 
                         if ($_SESSION["loggedin"] === 1) {
-                            echo htmlspecialchars($_SESSION["loggedin"]);
+                            echo htmlspecialchars("YOU DID IT");
                         }
                     ?>
             </li>
