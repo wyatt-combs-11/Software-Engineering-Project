@@ -60,6 +60,7 @@
          }
          if ($connectioni->errno) {
             printf("Could not insert record into table: %s<br />", $mysqli→error);
+            echo "BROKEN";
          }
          $connection->close();
 
