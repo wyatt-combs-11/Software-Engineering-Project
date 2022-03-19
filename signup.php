@@ -53,14 +53,8 @@
      
 
     if($uName != null || $pWord != null) {
-        $sql = "INSERT INTO Users (username, password, goalDescription, age) VALUES ('test', 'test', 'test', '7')";
+        $sql = "INSERT INTO Users (username, password, goalDescription, age) VALUES ('$uName', '$pWord', '$goals', '$age')";
         mysqli_query($connection, $sql);
-        // if (mysqli_query($connection, $sql)) {
-        //     echo "Sign UP Success";
-        //  }
-        //  else ($connectioni->errno) {
-        //     echo "BROKEN";
-        //  }
     }
 ?>
 
