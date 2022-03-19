@@ -53,7 +53,7 @@
      
 
     if($uName != null || $pWord != null) {
-        $sql = "INSERT INTO Users (username, password, goalDescription, age) VALUES ('test', 'test', 'test', 7)";
+        $sql = "INSERT INTO Users (username, password, goalDescription, age) VALUES ('test', 'test', 'test', '7')";
         
         if ($conection->query($sql) === TRUE) {
             echo "Sign UP Success";
