@@ -32,6 +32,7 @@
             }
             echo '<script>ColorChange();</script>';
             echo '<script>ColorChange();</script>';
+            echo '<script>ColorChange();</script>';
         ?>
     </a>
     <div id="titleDiv">
