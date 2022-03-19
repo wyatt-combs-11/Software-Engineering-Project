@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+?>
+
 <html lang="en">
 
 <head>
@@ -36,7 +39,18 @@
             <li><a href="PullWorkouts.html">Pull Workouts</a></li>
             <li><a href="LegWorkouts.html">Leg Workouts</a></li>
             <li><a href="Favorites.php">Favorited Workouts</a></li>
-            <li style=float:right><a href="../Login.php">Log In</a></li>
+            <li style=float:right> <a id= "login" href="../Login.php">
+                <b>
+                    <?php 
+                        if ($_SESSION["loggedin"] === true) {
+                            echo '<script>document.getElementById("login").href = "../logout.php";</script>';
+                            echo htmlspecialchars("Log Out");
+                        } else {
+                            echo htmlspecialchars("Log In");
+                        }
+                    ?>
+            
+            </a> </li>
             <li id = "lightdarkTog" style=float:right><a onclick="ColorChange()">Toggle Light/Dark Mode</a></li>
         </ul>
     </div>
