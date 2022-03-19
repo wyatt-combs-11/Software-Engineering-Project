@@ -60,17 +60,9 @@
             <b>
                 <?php
                     if ($_SESSION["loggedin"] === true) {
-                        echo "<li><a href='Favorites.php'>Favorited Workouts</a></li>";
+                        echo "<li style=float:right><a href='../accountSettings.php'>Account Settings</a></li>";
                     }
                 ?>
-            <li style=float:right> <a id= "login" href="../accountSettings.php">
-                <b>
-                    <?php 
-                        if ($_SESSION["loggedin"] === true) {
-                            echo htmlspecialchars("Account Settings");
-                        } 
-                    ?>
-            </a> </li>
             <li style=float:right> <a href="../signup.php">Sign Up</a></li>
             <li id = "lightdarkTog" style=float:right><a onclick="ColorChange()">Toggle Light/Dark Mode</a></li>
         </ul>
