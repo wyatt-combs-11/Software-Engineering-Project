@@ -46,7 +46,14 @@
             <li><a href="PushWorkouts.html">Push Workouts</a></li>
             <li><a href="PullWorkouts.html">Pull Workouts</a></li>
             <li><a href="LegWorkouts.html">Leg Workouts</a></li>
-            <li style=float:right>TO BE POPULATED</li>
+            <li style=float:right>
+                <b>
+                    <?php 
+                        if ($_SESSION["loggedin"] === 1) {
+                            echo htmlspecialchars($_SESSION["loggedin"]);
+                        }
+                    ?>
+            </li>
             <li style=float:right><a href="../Login.php">Log In</a></li>
             <li id = "lightdarkTog" style=float:right><a onclick="ColorChange()">Toggle Light/Dark Mode</a></li>
         </ul>
