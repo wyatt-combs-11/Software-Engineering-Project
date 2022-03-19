@@ -27,7 +27,7 @@
 <body>
     <a>
         <?php
-            if ($temp === '1') {
+            if ($_SESSION["mode"] === '1') {
                 echo '<script>ColorChange();</script>';
             }
         ?>
