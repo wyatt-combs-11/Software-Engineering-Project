@@ -54,17 +54,17 @@
     }
 
     if ($uName != null) {
-        $sql = "UPDATE 'Users' SET 'username' = '$uName' WHERE (`userId` = '$username');"
+        $sql = "UPDATE 'Users' SET 'username' = '$uName' WHERE (`userId` = '$username');";
         mysqli_query($connection, $sql);
     }
 
     if($pWord != null) {
-        $sql = "UPDATE 'Users' SET 'password' = '$pWord' WHERE (`userId` = '$username');"
+        $sql = "UPDATE 'Users' SET 'password' = '$pWord' WHERE (`userId` = '$username');";
         mysqli_query($connection, $sql);
     }
 
     if ($mode != null) {
-        $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE (`userId` = '$username');"
+        $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE (`userId` = '$username');";
         mysqli_query($connection, $sql);
     }
          
