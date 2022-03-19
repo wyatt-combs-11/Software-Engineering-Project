@@ -2,7 +2,7 @@
     session_start();
 
     if ($_SESSION["mode"] === 1) {
-        echo '<script>ColorChange();</script>'
+        echo '<script>ColorChange();</script>';
     }
 ?>
 
