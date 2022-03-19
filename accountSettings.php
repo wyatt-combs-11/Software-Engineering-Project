@@ -67,17 +67,18 @@
     if ($uName != null) {
         $sql = "UPDATE Users SET username = '$uName' WHERE (userId = '$current');";
         mysqli_query($connection, $sql);
+        $_SESSION["username"] = $uName;
     }
 
     if($pWord != null) {
         $sql = "UPDATE Users SET password = '$pWord' WHERE (userId = '$current');";
         mysqli_query($connection, $sql);
-        
     }
 
     if ($mode != null) {
         $sql = "UPDATE Users SET mode = '$mode' WHERE (userId = '$current');";
         mysqli_query($connection, $sql);
+        $_SESSION["mode"] = $mode;
        
     }
          
