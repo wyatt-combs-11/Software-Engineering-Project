@@ -56,7 +56,9 @@
     $pWord = $_POST["psword"] ?? null;
     $mode = $_POST["mode"] ?? null;
 
-    echo $_SESSION["username"];
+    $current = $_SESSION["username"];
+
+    echo $current;
 
 
     $connection = mysqli_connect('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
@@ -66,17 +68,17 @@
     }
 
     if ($uName != null) {
-        $sql = "UPDATE 'Users' SET 'username' = '$uName' WHERE (`userId` = '$_SESSION["username"]');";
+        $sql = "UPDATE 'Users' SET 'username' = '$uName' WHERE (`userId` = '$current');";
         mysqli_query($connection, $sql);
     }
 
     if($pWord != null) {
-        $sql = "UPDATE 'Users' SET 'password' = '$pWord' WHERE (`userId` = '$_SESSION["username"]');";
+        $sql = "UPDATE 'Users' SET 'password' = '$pWord' WHERE (`userId` = '$current');";
         mysqli_query($connection, $sql);
     }
 
     if ($mode != null) {
-        $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE (`userId` = '$_SESSION["username"]');";
+        $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE (`userId` = '$current');";
         mysqli_query($connection, $sql);
     }
          
