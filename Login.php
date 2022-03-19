@@ -21,7 +21,7 @@
         <li><a href="./html/ChestWorkouts.html">Chest Workouts</a></li>
         <li><a href="./html/PullWorkouts.html">Pull Workouts</a></li>
         <li><a href="./html/LegWorkouts.html">Leg Workouts</a></li>
-        <li style=float:right><a href="singup.php">Sign Up</a></li>
+        <li style=float:right><a href="signup.php">Sign Up</a></li>
         <!-- <li style=float:right><a href="TESTLINK.com">Log In</a></li> -->
     </ul>
 </div>
