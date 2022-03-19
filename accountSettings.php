@@ -56,6 +56,11 @@
     $pWord = $_POST["psword"] ?? null;
     $mode = $_POST["mode"] ?? null;
 
+    echo $username;
+    echo $mode;
+    echo $pWord;
+    echo $uName;
+
     $connection = mysqli_connect('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
 
     if ($connection -> connect_errno) {
