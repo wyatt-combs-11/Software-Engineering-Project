@@ -43,7 +43,7 @@
             <li><a href="PushWorkouts.html">Push Workouts</a></li>
             <li><a href="PullWorkouts.html">Pull Workouts</a></li>
             <li><a href="LegWorkouts.html">Leg Workouts</a></li>
-            <li style=float:right> <a href="../Logout.php">
+            <li style=float:right> <a href="../logout.php">
                 <b>
                     <?php 
                         if ($_SESSION["loggedin"] === true) {
