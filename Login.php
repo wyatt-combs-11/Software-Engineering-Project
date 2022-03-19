@@ -55,8 +55,9 @@
             session_start();
             $_SESSION["loggedin"] = true;
             $_SESSION["username"] = $uName;
-            $_SESSION["mode"] = mysqli_fetch_row($result)[5];
-            $_SESSION["id"] = mysqli_fetch_row($result)[0];
+            $hold = mysqli_fetch_row($result);
+            $_SESSION["mode"] = $hold[5];
+            $_SESSION["id"] = $hold[0];
             header("location: ./html/Favorites.php");
             echo "Login Success";
 
