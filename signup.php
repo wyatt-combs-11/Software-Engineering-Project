@@ -25,7 +25,7 @@
 </div>
 
 <div style="text-align:center">
-<form action = "Login.php" method = "post">
+<form action = "signup.php" method = "post">
     <h2>LOGIN</h2>
     <label>Username:</label>
     <input type="text" name="uname" placeholder="Username"><br>
