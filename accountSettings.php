@@ -65,7 +65,7 @@
     }
 
     if ($uName != null) {
-        $sql = "UPDATE 'Users' SET 'username' = '$uName' WHERE (`userId` = '$current');";
+        $sql = "UPDATE Users SET username = '$uName' WHERE (userId = '$current');";
         mysqli_query($connection, $sql);
     }
 
@@ -76,7 +76,7 @@
     }
 
     if ($mode != null) {
-        $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE ('userId' = '$current');";
+        $sql = "UPDATE Users SET mode = '$mode' WHERE (userId = '$current');";
         mysqli_query($connection, $sql);
        
     }
