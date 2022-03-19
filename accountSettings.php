@@ -57,7 +57,7 @@
     $mode = $_POST["mode"] ?? null;
 
     $current = $_SESSION["username"];
-    echo $current;
+    echo $_SESSION["id"];
 
 
     $connection = mysqli_connect('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
