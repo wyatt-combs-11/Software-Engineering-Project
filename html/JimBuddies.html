@@ -7,6 +7,18 @@
         <meta charset="UTF-8">
 </head>
 
+<script>
+		
+    function ColorChange() {
+        var theme = document.getElementsByTagName('link')[0];
+        if (theme.getAttribute('href') == "../css/baseWebsite.css") {
+            theme.setAttribute('href', "../css/baseWebsiteDark.css");
+        } else {
+            theme.setAttribute('href', "../css/baseWebsite.css");
+        }
+    }
+</script>
+
 <body>
 
     <div id="titleDiv">
