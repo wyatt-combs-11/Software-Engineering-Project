@@ -57,6 +57,7 @@
                     ?>
             
             </a> </li>
+            <b>
             <?php
                 if ($_SESSION["loggedin"] === true]) {
                     echo htmlspecialchars("<li><a href='Favorites.php'>Favorited Workouts</a></li>");
