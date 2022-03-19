@@ -27,12 +27,9 @@
 <body>
     <a>
         <?php
-            if ($temp === 1) {
+            if ($temp === '1') {
                 echo '<script>ColorChange();</script>';
             }
-            echo '<script>ColorChange();</script>';
-            echo '<script>ColorChange();</script>';
-            echo '<script>ColorChange();</script>';
         ?>
     </a>
     <div id="titleDiv">
