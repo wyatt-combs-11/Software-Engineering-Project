@@ -1,7 +1,8 @@
 <?php
         session_start();
-        
-        if ($_SESSION["mode"] === 1) {
+        $temp = $_SESSION["mode"];
+        echo "$temp";
+        if ($temp === 1) {
             echo "is this happening";
             echo '<script>ColorChange();</script>';
         }
