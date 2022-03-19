@@ -57,7 +57,6 @@
     $mode = $_POST["mode"] ?? null;
 
     $current = $_SESSION["username"];
-
     echo $current;
 
 
@@ -68,17 +67,17 @@
     }
 
     if ($uName != null) {
-        $sql = "UPDATE 'Users' SET 'username' = '$uName' WHERE (`userId` = '$current');";
-        mysqli_query($connection, $sql);
+        //$sql = "UPDATE 'Users' SET 'username' = '$uName' WHERE (`username` = '$current');";
+        //mysqli_query($connection, $sql);
     }
 
     if($pWord != null) {
-        $sql = "UPDATE 'Users' SET 'password' = '$pWord' WHERE (`userId` = '$current');";
+        $sql = "UPDATE 'Users' SET 'password' = '$pWord' WHERE (`username` = '$current');";
         mysqli_query($connection, $sql);
     }
 
     if ($mode != null) {
-        $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE (`userId` = '$current');";
+        $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE (`username` = '$current');";
         mysqli_query($connection, $sql);
     }
          
