@@ -1,6 +1,5 @@
 <?php
         session_start();
-        $temp = $_SESSION["mode"];
 ?>
 <html lang="en">
 
@@ -26,13 +25,15 @@
 
 
 <body>
-    <?php
-        if ($temp === 1) {
+    <a>
+        <?php
+            if ($temp === 1) {
+                echo '<script>ColorChange();</script>';
+            }
             echo '<script>ColorChange();</script>';
-        }
-        echo '<script>ColorChange();</script>';
-        echo '<script>ColorChange();</script>';
-    ?>
+            echo '<script>ColorChange();</script>';
+        ?>
+    </a>
     <div id="titleDiv">
         <img id = "logo" src="../images/Logo.PNG" alt="Jim People Logo">
         <h1 class="mainTitle"> All Workouts</h1>
