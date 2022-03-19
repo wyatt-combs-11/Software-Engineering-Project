@@ -81,6 +81,7 @@
 
     if ($mode != null) {
         echo "MODE";
+        echo "$mode";
         $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE ('userId' = '3');";
         mysqli_query($connection, $sql);
        
