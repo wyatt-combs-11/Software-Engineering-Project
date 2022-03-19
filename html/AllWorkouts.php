@@ -25,12 +25,14 @@
     <?php
         session_start();
 
-        echo "$_SESSION['mode']";
+        //echo "$_SESSION['mode']";
 
         if ($_SESSION["mode"] === 1) {
             echo '<script>ColorChange();</script>';
         }
     ?>
+
+    <script>ColorChange();</script>
 
     <div id="titleDiv">
         <img id = "logo" src="../images/Logo.PNG" alt="Jim People Logo">
