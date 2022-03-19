@@ -1,5 +1,9 @@
 <?php
     session_start();
+
+    if ($_SESSION["mode"] == 1) {
+        echo '<script>ColorChange();</script>'
+    }
 ?>
 
 <html lang="en">
