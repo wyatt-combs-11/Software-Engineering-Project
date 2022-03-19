@@ -54,14 +54,14 @@
 
     if($uName != null || $pWord != null) {
         $sql = 'INSERT INTO exerciseDB.Users (username, password, goalDescription, age) VALUES ("test", "test", "test", "test")';
-        $result = mysqli_query($connection, $sql);
         if ($conection->query($sql)) {
             printf("Record inserted successfully.<br />");
             echo "Login Success";
          }
-         if ($connectioni→errno) {
+         if ($connectioni->errno) {
             printf("Could not insert record into table: %s<br />", $mysqli→error);
          }
+         $connection->close();
 
         
     }
