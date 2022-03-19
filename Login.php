@@ -46,19 +46,7 @@
 
     if ($connection -> connect_errno) {
         echo "NOT CONNECTED";
-    }
-
-    // Perform query
-    // if ($result = $connection -> query("SELECT * FROM Users")) {
-    //    //echo "Returned rows are: " . $result -> num_rows;
-    //     // Free result set
-    //     while($row = mysqli_fetch_array($result))
-    //     {
-    //        //print_r($row);
-    //     } 
-    // }
-    
-     
+    }     
 
     if($uName != null || $pWord != null) {
         $sql = "SELECT * FROM Users WHERE username='$uName' AND password='$pWord'";
