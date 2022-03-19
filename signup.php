@@ -53,13 +53,12 @@
      
 
     if($uName != null || $pWord != null) {
-        $sql = 'INSERT INTO Users (username, password, goalDescription, age) VALUES ("test", "test", "test", "test")';
-        if ($conection->query($sql)) {
-            printf("Record inserted successfully.<br />");
-            echo "Login Success";
+        $sql = "INSERT INTO Users (username, password, goalDescription, age) VALUES ('test', 'test', 'test', 'test')";
+        
+        if ($conection->query($sql) === TRUE) {
+            echo "Sign UP Success";
          }
          if ($connectioni->errno) {
-            printf("Could not insert record into table: %s<br />", $mysqli→error);
             echo "BROKEN";
          }
          $connection->close();
