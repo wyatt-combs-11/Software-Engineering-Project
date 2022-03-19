@@ -29,11 +29,15 @@
 <div style="text-align:center">
 <form action = "Login.php" method = "post">
     <h2>LOGIN</h2>
-    <label>Username:</label>
+    <label>Change Username:</label>
     <input type="text" name="uname" placeholder="Username"><br>
-    <label>Password:</label>
+    <label>Change Password:</label>
     <input type="password" name="psword" placeholder="Password"><br>
-    <button type="submit">Login</button>
+    <label>Light Versus Dark Mode: </label>
+    <select name="mode">
+        <option value="0">Light Mode</option>
+        <option value="1">Dark Mode</option>
+    <button type="submit">Update Settings</button>
 </form>
 
 <?php 
@@ -41,6 +45,7 @@
     $adminPWord = "ADMIN";
     $uName = $_POST["uname"] ?? null;
     $pWord = $_POST["psword"] ?? null;
+    $mode = $_POST["mode"] ?? null;
 
     $connection = mysqli_connect('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
 
@@ -48,32 +53,21 @@
         echo "NOT CONNECTED";
     }
 
-    // Perform query
-    // if ($result = $connection -> query("SELECT * FROM Users")) {
-    //    //echo "Returned rows are: " . $result -> num_rows;
-    //     // Free result set
-    //     while($row = mysqli_fetch_array($result))
-    //     {
-    //        //print_r($row);
-    //     } 
-    // }
-    
-     
-
-    if($uName != null || $pWord != null) {
-        $sql = "SELECT * FROM Users WHERE username='$uName' AND password='$pWord'";
-        $result = mysqli_query($connection, $sql);
-        if(mysqli_num_rows($result) === 1) {
-            session_start();
-            $_SESSION["loggedin"] = true;
-            $_SESSION["username"] = $username;
-            header("location: ./html/Favorites.php");
-            echo "Login Success";
-
-        } else {
-            echo "Incorrect Username or Password";
-        }
+    if ($uName != null) {
+        $sql = "UPDATE 'Users' SET 'username' = '$uName' WHERE (`userId` = '$username');"
+        mysqli_query($connection, $sql);
     }
+
+    if($pWord != null) {
+        $sql = "UPDATE 'Users' SET 'password' = '$pWord' WHERE (`userId` = '$username');"
+        mysqli_query($connection, $sql);
+    }
+
+    if ($mode != null) {
+        $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE (`userId` = '$username');"
+        mysqli_query($connection, $sql);
+    }
+         
 ?>
 
 </div>
