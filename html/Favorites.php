@@ -43,6 +43,7 @@
             <li><a href="PushWorkouts.html">Push Workouts</a></li>
             <li><a href="PullWorkouts.html">Pull Workouts</a></li>
             <li><a href="LegWorkouts.html">Leg Workouts</a></li>
+            <li style=float:right> <a href="../signup.php">Sign Up</a></li>
             <li style=float:right> <a id= "login" href="../Login.php">
                 <b>
                     <?php 
