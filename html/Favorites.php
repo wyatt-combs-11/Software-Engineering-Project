@@ -7,7 +7,6 @@
 ?>
 
 
-<!-- <!DOCTYPE html> -->
 <html lang="en">
 
 <head>
@@ -33,12 +32,13 @@
 <body>
     <div id="titleDiv">
         <img id = "logo" src="../images/Logo.PNG" alt="Jim People Logo">
-        <h1 class="mainTitle"> All Workouts</h1>
+        <h1 class="mainTitle"> Favorited Workouts</h1>
     </div>
 
     <div id="workoutDiv"> 
         <ul class="heading">
             <li><a href="JimBuddies.html">Home Page</a></li>
+            <li><a href="AllWorkouts.php">All Workouts</a></li>
             <li><a href="ChestWorkouts.html">Chest Workouts</a></li>
             <li><a href="PushWorkouts.html">Push Workouts</a></li>
             <li><a href="PullWorkouts.html">Pull Workouts</a></li>
