@@ -53,7 +53,7 @@
      
 
     if($uName != null || $pWord != null) {
-        $sql = 'INSERT INTO exerciseDB.Users (username, password, goalDescription, age) VALUES ("test", "test", "test", "test")';
+        $sql = 'INSERT INTO Users (username, password, goalDescription, age) VALUES ("test", "test", "test", "test")';
         if ($conection->query($sql)) {
             printf("Record inserted successfully.<br />");
             echo "Login Success";
