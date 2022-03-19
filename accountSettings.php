@@ -27,7 +27,7 @@
 </div>
 
 <div style="text-align:center">
-<form action = "Login.php" method = "post">
+<form action = "accountSettings.php" method = "post">
     <h2>LOGIN</h2>
     <label>Change Username:</label>
     <input type="text" name="uname" placeholder="Username"><br>
@@ -37,6 +37,7 @@
     <select name="mode">
         <option value="0">Light Mode</option>
         <option value="1">Dark Mode</option>
+    </select>
     <button type="submit">Update Settings</button>
 </form>
 
