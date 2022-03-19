@@ -54,7 +54,6 @@
                     ?>
             
             </a> </li>
-            <li style=float:right><a href="../Login.php">Log In</a></li>
             <li id = "lightdarkTog" style=float:right><a onclick="ColorChange()">Toggle Light/Dark Mode</a></li>
         </ul>
     </div>
