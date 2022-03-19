@@ -74,14 +74,14 @@
 
     if($pWord != null) {
         echo "PASSWORD";
-        $sql = "UPDATE 'Users' SET 'password' = '$pWord' WHERE (`userId` = '3');";
+        $sql = "UPDATE Users SET password = '$pWord' WHERE (userId = '3');";
         mysqli_query($connection, $sql);
         
     }
 
     if ($mode != null) {
         echo "MODE";
-        $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE (`userId` = '3');";
+        $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE ('userId' = '3');";
         mysqli_query($connection, $sql);
        
     }
