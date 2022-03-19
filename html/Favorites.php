@@ -47,6 +47,7 @@
                 <b>
                     <?php 
                         if ($_SESSION["loggedin"] === true) {
+                            echo '<script>console.log("THIS WORKS?");</script>'
                             echo htmlspecialchars("Log Out");
                         } else {
                             echo htmlspecialchars("Log In");
