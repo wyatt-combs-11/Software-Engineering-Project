@@ -17,10 +17,11 @@
 <div id="workoutDiv"> 
     <ul>
         <li><a href="./html/JimBuddies.html">Home Page</a></li>
-        <li><a href="./html/AllWorkouts.html">All Workouts</a></li>
+        <li><a href="./html/AllWorkouts.php">All Workouts</a></li>
         <li><a href="./html/ChestWorkouts.html">Chest Workouts</a></li>
         <li><a href="./html/PullWorkouts.html">Pull Workouts</a></li>
         <li><a href="./html/LegWorkouts.html">Leg Workouts</a></li>
+        <li style=float:right><a href="Login.php">Log In</a></li>
     </ul>
 </div>
 
