@@ -37,7 +37,7 @@
     <select name="mode">
         <option value="0">Light Mode</option>
         <option value="1">Dark Mode</option>
-    </select>
+    </select> <br>
     <button type="submit">Update Settings</button>
 </form>
 
