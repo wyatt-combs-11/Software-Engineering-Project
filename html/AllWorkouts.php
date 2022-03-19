@@ -59,7 +59,7 @@
             </a> </li>
             <b>
                 <?php
-                    if ($_SESSION["loggedin"] === true]) {
+                    if ($_SESSION["loggedin"] === true) {
                         echo "<li><a href='Favorites.php'>Favorited Workouts</a></li>";
                     }
                 ?>
