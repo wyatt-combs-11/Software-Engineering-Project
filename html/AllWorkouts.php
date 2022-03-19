@@ -1,7 +1,6 @@
 <?php
-    session_start();
+        session_start();
 ?>
-
 <html lang="en">
 
 <head>
@@ -24,8 +23,15 @@
     }
 </script>
 
-<body>
 
+<body>
+    <a>
+        <?php
+            if ($_SESSION["mode"] === '1') {
+                echo '<script>ColorChange();</script>';
+            }
+        ?>
+    </a>
     <div id="titleDiv">
         <img id = "logo" src="../images/Logo.PNG" alt="Jim People Logo">
         <h1 class="mainTitle"> All Workouts</h1>
@@ -51,7 +57,14 @@
                     ?>
             
             </a> </li>
-            <li style=float:right> <a href="../signup.php">Sign Up</a></li>
+            <b>
+                <?php
+                    if ($_SESSION["loggedin"] === true) {
+                        echo "<li style=float:right><a href='../accountSettings.php'>Account Settings</a></li>";
+                    } else {
+                        echo '<li style=float:right> <a href="../signup.php">Sign Up</a></li>';
+                    }
+                ?>
             <li id = "lightdarkTog" style=float:right><a onclick="ColorChange()">Toggle Light/Dark Mode</a></li>
         </ul>
     </div>
