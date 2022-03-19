@@ -69,16 +69,21 @@
     if ($uName != null) {
         //$sql = "UPDATE 'Users' SET 'username' = '$uName' WHERE (`username` = '$current');";
         //mysqli_query($connection, $sql);
+        echo "TEST"
     }
 
     if($pWord != null) {
+        echo "PASSWORD"
         $sql = "UPDATE 'Users' SET 'password' = '$pWord' WHERE (`userId` = '3');";
         mysqli_query($connection, $sql);
+        
     }
 
     if ($mode != null) {
+        echo "MODE"
         $sql = "UPDATE 'Users' SET 'mode' = '$mode' WHERE (`userId` = '3');";
         mysqli_query($connection, $sql);
+       
     }
          
 ?>
