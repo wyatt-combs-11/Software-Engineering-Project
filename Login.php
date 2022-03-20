@@ -31,7 +31,7 @@
     <h2>LOGIN</h2>
     <input type="text" name="uname" placeholder="Username"><br>
     <input type="password" name="psword" placeholder="Password"><br>
-    <button class="btn btn-primary" type="submit">Login</button>
+    <button type="submit">Login</button>
 </form>
 
 <?php 
