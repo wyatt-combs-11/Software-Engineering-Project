@@ -27,7 +27,7 @@
     </ul>
 </div>
 
-<div style="text-align:center">
+<div style="text-align:center; background-color: gray;">
 <form action = "Login.php" method = "post">
     <h2>LOGIN</h2>
     <input type="text" name="uname" placeholder="Username"><br>
