@@ -44,6 +44,10 @@ ul {
     font-size: 16px;
 }
 
+#button1:hover {
+    background-color: lightblue;
+}
+
 #logo {
     height: 100px;
     width: auto;
