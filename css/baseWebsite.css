@@ -22,6 +22,17 @@ h1{
     color: black;
 }
 
+.buttonFun {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -74,15 +85,6 @@ div.row {
 
 div.row:hover {
     transform: rotateZ(360deg);
-}
-
-
-.buttonFun {
-    margin: 10px;
-    background-color: blue;
-    color: white;
-    border: 6px solid blue;
-    border-radius: 25px;
 }
 
 
