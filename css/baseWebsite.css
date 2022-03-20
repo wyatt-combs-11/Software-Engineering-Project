@@ -22,7 +22,16 @@ h1{
     color: black;
 }
 
-.buttonFun {
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: navy;
+}
+
+#button1 {
     background-color: blue;
     border: none;
     color: white;
@@ -31,14 +40,6 @@ h1{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: navy;
 }
 
 #logo {

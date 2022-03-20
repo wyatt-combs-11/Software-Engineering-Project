@@ -22,7 +22,6 @@
         <li><a href="./html/PullWorkouts.html">Pull Workouts</a></li>
         <li><a href="./html/LegWorkouts.html">Leg Workouts</a></li>
         <li style=float:right><a href="signup.php">Sign Up</a></li>
-        <!-- <li style=float:right><a href="TESTLINK.com">Log In</a></li> -->
     </ul>
 </div>
 
@@ -31,7 +30,7 @@
     <h2>LOGIN</h2>
     <input type="text" name="uname" placeholder="Username"><br>
     <input type="password" name="psword" placeholder="Password"><br>
-    <button class="buttonFun" type="submit">Login</button>
+    <button id="button1" type="submit">Login</button>
 </form>
 
 <?php 
@@ -57,7 +56,6 @@
             $_SESSION["mode"] = $hold[5];
             $_SESSION["id"] = $hold[0];
             header("location: ./html/Favorites.php");
-            echo "Login Success";
 
         } else {
             echo "Incorrect Username or Password";
