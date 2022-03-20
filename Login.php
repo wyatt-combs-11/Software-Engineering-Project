@@ -3,6 +3,7 @@
     
 <head>
     <title> Log In </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/baseWebsite.css">
     <meta charset="UTF-8">
 </head>
@@ -29,11 +30,9 @@
 <div style="text-align:center">
 <form action = "Login.php" method = "post">
     <h2>LOGIN</h2>
-    <label>Username:</label>
     <input type="text" name="uname" placeholder="Username"><br>
-    <label>Password:</label>
     <input type="password" name="psword" placeholder="Password"><br>
-    <button type="submit">Login</button>
+    <button class="btn btn-primary" type="submit">Login</button>
 </form>
 
 <?php 
