@@ -26,13 +26,17 @@
 </div>
 
 <div style="text-align:center;">
-<form action = "Login.php" method = "post">
-    <h2>LOGIN</h2>
-    <input type="text" name="uname" placeholder="Username"><br>
-    <input type="password" name="psword" placeholder="Password"><br>
-    <button id="button1" type="submit">Login</button>
-</form>
+    <form action = "Login.php" method = "post">
+        <h2>LOGIN</h2>
+        <input type="text" name="uname" placeholder="Username"><br>
+        <input type="password" name="psword" placeholder="Password"><br>
+        <button id="button1" type="submit">Login</button>
+    </form>
+</div>
 
+</body>
+
+</html>
 <?php 
     $adminUName = "ADMIN";
     $adminPWord = "ADMIN";
@@ -62,9 +66,3 @@
         }
     }
 ?>
-
-</div>
-
-</body>
-
-</html>
