@@ -30,7 +30,7 @@
     <h2>LOGIN</h2>
     <input type="text" name="uname" placeholder="Username"><br>
     <input type="password" name="psword" placeholder="Password"><br>
-    <button id="button1" type="submit">Login</button>
+    <button style="background-color: blue; color: white;" id="button1" type="submit">Login</button>
 </form>
 
 <?php 
