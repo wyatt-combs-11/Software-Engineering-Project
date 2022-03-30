@@ -60,9 +60,7 @@
         </ul>
     </div>
 
-    <div>  
-
-    <img id="homeboy" src="../images/mattox.PNG">
+    <div>
 
     </div>
 
