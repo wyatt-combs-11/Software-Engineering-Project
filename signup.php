@@ -32,7 +32,7 @@
     <label>Username:</label>
     <input type="text" name="uname" placeholder="Username"><br>
     <label>Password:</label>
-    <input type="password" name="psword" placeholder="Password"><br>
+    <input type="password" name="psword" placeholder="Password" pattern="[a-zA-Z0-9]{8,}" title=""><br>
     <label>Goals:</label>
     <input type="text" name="goals" placeholder="Goals"><br>
     <label>Age:</label>
