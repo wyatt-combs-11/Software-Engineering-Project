@@ -11,7 +11,7 @@
 
 <div id="titleDiv">
     <img id = "logo" src="images/Logo.PNG" alt="Jim People Logo">
-    <h1 class="mainTitle"> Login</h1>
+    <h1 class="mainTitle"> Sign Up</h1>
 </div>
 
 <div id="workoutDiv"> 
