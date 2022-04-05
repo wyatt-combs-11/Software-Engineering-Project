@@ -2,7 +2,7 @@
 <html lang = en>
     
 <head>
-    <title> Log In </title>
+    <title> Sign Up </title>
     <link rel="stylesheet" href="./css/baseWebsite.css">
     <meta charset="UTF-8">
 </head>
@@ -26,8 +26,9 @@
 </div>
 
 <div style="text-align:center">
+<div id="signupBox" class="menuCard" style="line-height: 50px;">
 <form action = "signup.php" method = "post">
-    <h2>LOGIN</h2>
+    <h2 style="padding-top: 25px;">Create an Account</h2>
     <label>Username:</label>
     <input type="text" name="uname" placeholder="Username"><br>
     <label>Password:</label>
@@ -35,9 +36,11 @@
     <label>Goals:</label>
     <input type="text" name="goals" placeholder="Goals"><br>
     <label>Age:</label>
-    <input type="text" name="age" placeholder="AGE"><br>
+    <input type="text" name="age" placeholder="Age"><br>
     <button type="submit">Sign Up</button>
+    <h2 style="font-size: 15px; padding-top: 45px;">JimPeople™</h2>
 </form>
+</div>
 
 <?php 
     $uName = $_POST["uname"] ?? null;

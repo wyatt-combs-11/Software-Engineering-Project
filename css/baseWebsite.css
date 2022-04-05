@@ -76,8 +76,6 @@ div.row:hover {
     transform: rotateZ(360deg);
 }
 
-
-
 div.card {
     background-color: lightblue;
     color:blue;
@@ -85,6 +83,18 @@ div.card {
     margin: 50px;
     width: 150px;
     height: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+
+  div.menuCard {
+    background-color: lightblue;
+    color:black;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    height: 450px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
   }
