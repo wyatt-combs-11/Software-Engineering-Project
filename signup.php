@@ -30,9 +30,9 @@
 <form action = "signup.php" method = "post">
     <h2 style="padding-top: 25px;">Create an Account</h2>
     <label>Username:</label>
-    <input type="text" name="uname" placeholder="Username"><br>
+    <input type="text" name="uname" placeholder="Username" require><br>
     <label>Password:</label>
-    <input type="password" name="psword" placeholder="Password" pattern="[a-zA-Z0-9]{8,}" title="Only include letters a-z and numbers 0-9. Must be more than 8 characters"><br>
+    <input type="password" name="psword" placeholder="Password" pattern="[a-zA-Z0-9]{8,}" title="Only include letters a-z and numbers 0-9. Must be more than 8 characters" require><br>
     <label>Goals:</label>
     <input type="text" name="goals" placeholder="Goals"><br>
     <label>Age:</label>
