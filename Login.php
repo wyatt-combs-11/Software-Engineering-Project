@@ -27,14 +27,18 @@
 </div>
 
 <div style="text-align:center">
+<div id="signupBox" class="menuCard" style="line-height: 35px; height: 250px">
 <form action = "Login.php" method = "post">
-    <h2>LOGIN</h2>
+    <h2 style="padding-top: 15px;">Login to an existing account</h2>
     <label>Username:</label>
     <input type="text" name="uname" placeholder="Username"><br>
     <label>Password:</label>
     <input type="password" name="psword" placeholder="Password"><br>
     <button type="submit">Login</button>
+    <h2 style="font-size: 15px; padding-top: 25px;">JimPeople™</h2>
 </form>
+</div>
+
 
 <?php 
     $adminUName = "ADMIN";
