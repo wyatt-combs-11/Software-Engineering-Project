@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang = en>
-    
+
 <head>
     <title> Sign Up </title>
     <link rel="stylesheet" href="./css/baseWebsite.css">
@@ -14,13 +14,13 @@
     <h1 class="mainTitle"> Login</h1>
 </div>
 
-<div id="workoutDiv"> 
+<div id="workoutDiv">
     <ul>
         <li><a href="./html/JimBuddies.html">Home Page</a></li>
         <li><a href="./html/AllWorkouts.php">All Workouts</a></li>
-        <li><a href="./html/ChestWorkouts.html">Chest Workouts</a></li>
-        <li><a href="./html/PullWorkouts.html">Pull Workouts</a></li>
-        <li><a href="./html/LegWorkouts.html">Leg Workouts</a></li>
+        <li><a href="./html/ChestWorkouts.php">Chest Workouts</a></li>
+        <li><a href="./html/PullWorkouts.php">Pull Workouts</a></li>
+        <li><a href="./html/LegWorkouts.php">Leg Workouts</a></li>
         <li style=float:right><a href="Login.php">Log In</a></li>
     </ul>
 </div>
@@ -42,7 +42,7 @@
 </form>
 </div>
 
-<?php 
+<?php
     $uName = $_POST["uname"] ?? null;
     $pWord = $_POST["psword"] ?? null;
     $goals = $_POST["goals"] ?? null;
@@ -53,8 +53,8 @@
     if ($connection -> connect_errno) {
         echo "NOT CONNECTED";
     }
-    
-     
+
+
 
     if($uName != null || $pWord != null) {
         $sql = "INSERT INTO Users (username, password, goalDescription, age) VALUES ('$uName', '$pWord', '$goals', '$age')";

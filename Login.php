@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang = en>
-    
+
 <head>
     <title> Log In </title>
     <link rel="stylesheet" href="./css/baseWebsite.css">
@@ -14,13 +14,13 @@
     <h1 class="mainTitle"> Login</h1>
 </div>
 
-<div id="workoutDiv"> 
+<div id="workoutDiv">
     <ul>
         <li><a href="./html/JimBuddies.html">Home Page</a></li>
         <li><a href="./html/AllWorkouts.php">All Workouts</a></li>
-        <li><a href="./html/ChestWorkouts.html">Chest Workouts</a></li>
-        <li><a href="./html/PullWorkouts.html">Pull Workouts</a></li>
-        <li><a href="./html/LegWorkouts.html">Leg Workouts</a></li>
+        <li><a href="./html/ChestWorkouts.php">Chest Workouts</a></li>
+        <li><a href="./html/PullWorkouts.php">Pull Workouts</a></li>
+        <li><a href="./html/LegWorkouts.php">Leg Workouts</a></li>
         <li style=float:right><a href="signup.php">Sign Up</a></li>
         <!-- <li style=float:right><a href="TESTLINK.com">Log In</a></li> -->
     </ul>
@@ -40,7 +40,7 @@
 </div>
 
 
-<?php 
+<?php
     $adminUName = "ADMIN";
     $adminPWord = "ADMIN";
     $uName = $_POST["uname"] ?? null;
@@ -50,7 +50,7 @@
 
     if ($connection -> connect_errno) {
         echo "NOT CONNECTED";
-    }     
+    }
 
     if($uName != null || $pWord != null) {
         $sql = "SELECT * FROM Users WHERE username='$uName' AND password='$pWord'";

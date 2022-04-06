@@ -32,9 +32,9 @@
         <ul class="heading">
             <li><a href="JimBuddies.html">Home Page</a></li>
             <li><a href="AllWorkouts.php">All Workouts</a></li>
-            <li><a href="ChestWorkouts.html">Chest Workouts</a></li>
-            <li><a href="PullWorkouts.html">Pull Workouts</a></li>
-            <li><a href="LegWorkouts.html">Leg Workouts</a></li>
+            <li><a href="ChestWorkouts.php">Chest Workouts</a></li>
+            <li><a href="PullWorkouts.php">Pull Workouts</a></li>
+            <li><a href="LegWorkouts.php">Leg Workouts</a></li>
             <li><a href="Favorites.php">Favorited Workouts</a></li>
             <li style=float:right><a href="../Login.php">Log In</a></li>
             <li style=float:right> <a href="../signup.php">Sign Up</a></li>
@@ -43,30 +43,34 @@
     </div>
 
     <div>  
+        <?php
+            $connection = new mysqli('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
 
-        
-        <a href="TEXT.com">
-            <div id="pushdiv" class="card row">
-                <img id="push" class="exercise" src="../images/test.jpg">
-                <h3 id="pushH" >Push Workout</h3>
-                <p id="pushD">
-                    A push day at the gym
-                </p>
-            </div>
-        </a>
-      
-       
-        
-        <a href="TEXT.com">
-            <div id="crossdiv" class="card row">
-                <img id="cross" class="exercise" src="../images/test.jpg">
-                <h3 id="crossH" >Crossfit Workout</h3>
-                <p id="crossD">
-                    I am gonna be honest, I don't even know what crossfit is 100%
-                </p>
-            </div>
-        </a>
-        
+            if ($connection -> connect_errno) {
+                echo "NOT CONNECTED";
+            }
+
+            $data = [];
+            $sql = 'SELECT * FROM `Exercises` WHERE ppl = "Push"';
+            $results = $connection->query($sql);
+            if($results->num_rows > 0) {
+                while ($row = $results->fetch_assoc()) {
+                    $data[] = $row;
+                }
+            }
+        ?>
+
+        <table>
+            <?php foreach($results as $result): ?>
+                    <div class="card row">
+                        <h3 id="h3" ><?php echo $result['exerciseName'] ?></h3>
+                        <p>
+                            Main: <?php echo $result['mainMuscle'] ?><br>
+                            Second: <?php echo $result['secondMuscle'] ?>
+                        </p>
+                    </div>
+            <?php endforeach; ?>
+        </table>
     </div>
 
 </body>

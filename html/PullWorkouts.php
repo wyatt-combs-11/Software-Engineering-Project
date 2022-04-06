@@ -32,10 +32,9 @@
         <ul class="heading">
             <li><a href="JimBuddies.html">Home Page</a></li>
             <li><a href="AllWorkouts.php">All Workouts</a></li>
-            <li><a href="ChestWorkouts.html">Chest Workouts</a></li>
-            <li><a href="PushWorkouts.html">Push Workouts</a></li>
-            
-            <li><a href="LegWorkouts.html">Leg Workouts</a></li>
+            <li><a href="ChestWorkouts.php">Chest Workouts</a></li>
+            <li><a href="PushWorkouts.php">Push Workouts</a></li>
+            <li><a href="LegWorkouts.php">Leg Workouts</a></li>
             <li><a href="Favorites.php">Favorited Workouts</a></li>
             <li style=float:right><a href="../Login.php">Log In</a></li>
             <li style=float:right> <a href="../signup.php">Sign Up</a></li>
@@ -44,28 +43,34 @@
     </div>
 
     <div>  
-        
-        <a href="TEXT.com">
-            <div id="pulldiv" class="card row">
-                <img id="pull" class="exercise" src="../images/test.jpg">
-                <h3 id="pullH" >Pull Workout</h3>
-                <p id="pullD">
-                    A Pull day at the gym
-                </p>
-            </div>
-        </a>
+        <?php
+            $connection = new mysqli('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
 
-        <a href="TEXT.com">
-            <div id="bicepdiv" class="card row">
-                <img id="bicep" class="exercise" src="../images/test.jpg">
-                <h3 id="bicepH" >Bicep Workout</h3>
-                <p id="bicepD">
-                    Guys I am NOT creative
-                </p>
-            </div>
-        </a>
+            if ($connection -> connect_errno) {
+                echo "NOT CONNECTED";
+            }
 
-        
+            $data = [];
+            $sql = 'SELECT * FROM `Exercises` WHERE ppl = "Pull"';
+            $results = $connection->query($sql);
+            if($results->num_rows > 0) {
+                while ($row = $results->fetch_assoc()) {
+                    $data[] = $row;
+                }
+            }
+        ?>
+
+        <table>
+            <?php foreach($results as $result): ?>
+                    <div class="card row">
+                        <h3 id="h3" ><?php echo $result['exerciseName'] ?></h3>
+                        <p>
+                            Main: <?php echo $result['mainMuscle'] ?><br>
+                            Second: <?php echo $result['secondMuscle'] ?>
+                        </p>
+                    </div>
+            <?php endforeach; ?>
+        </table>
     </div>
 
 

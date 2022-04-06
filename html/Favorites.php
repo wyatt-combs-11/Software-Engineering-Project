@@ -39,10 +39,10 @@
         <ul class="heading">
             <li><a href="JimBuddies.html">Home Page</a></li>
             <li><a href="AllWorkouts.php">All Workouts</a></li>
-            <li><a href="ChestWorkouts.html">Chest Workouts</a></li>
-            <li><a href="PushWorkouts.html">Push Workouts</a></li>
-            <li><a href="PullWorkouts.html">Pull Workouts</a></li>
-            <li><a href="LegWorkouts.html">Leg Workouts</a></li>
+            <li><a href="ChestWorkouts.php">Chest Workouts</a></li>
+            <li><a href="PushWorkouts.php">Push Workouts</a></li>
+            <li><a href="PullWorkouts.php">Pull Workouts</a></li>
+            <li><a href="LegWorkouts.php">Leg Workouts</a></li>
             <li style=float:right> <a href="../signup.php">Sign Up</a></li>
             <li style=float:right> <a id= "login" href="../Login.php">
                 <b>
@@ -60,7 +60,39 @@
         </ul>
     </div>
 
-    <div>
+    <div>  
+        <?php
+            $connection = new mysqli('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
+
+            if ($connection -> connect_errno) {
+                echo "NOT CONNECTED";
+            }
+
+            $data = [];
+            $sql = "    SELECT exerciseName, mainMuscle, secondMuscle 
+                        FROM Exercises
+                        JOIN UserExercises ON Exercises.exerciseId = UserExercises.exerciseId
+                        WHERE UserExercises.userId = ".strval($_SESSION["id"]);
+
+            $results = $connection->query($sql);
+            if($results->num_rows > 0) {
+                while ($row = $results->fetch_assoc()) {
+                    $data[] = $row;
+                }
+            }
+        ?>
+
+        <table>
+            <?php foreach($results as $result): ?>
+                    <div class="card row">
+                        <h3 id="h3" ><?php echo $result['exerciseName'] ?></h3>
+                        <p>
+                            Main: <?php echo $result['mainMuscle'] ?><br>
+                            Second: <?php echo $result['secondMuscle'] ?>
+                        </p>
+                    </div>
+            <?php endforeach; ?>
+        </table>
 
     </div>
 
