@@ -23,7 +23,6 @@
 
     function SearchExercises() {
         var input = document.getElementById("search").value;
-        console.log(input);
     }
 </script>
 
@@ -59,7 +58,6 @@
                             echo htmlspecialchars("Log In");
                         }
                     ?>
-            
             </a> </li>
             <b>
                 <?php
