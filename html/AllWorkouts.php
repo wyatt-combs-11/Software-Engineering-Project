@@ -12,7 +12,6 @@
 </head>
 
 <script>
-		
     function ColorChange() {
         var theme = document.getElementsByTagName('link')[0];
         if (theme.getAttribute('href') == "../css/baseWebsite.css") {
@@ -20,6 +19,11 @@
         } else {
             theme.setAttribute('href', "../css/baseWebsite.css");
         }
+    }
+
+    function SearchExercises() {
+        var input = document.getElementById("search").value;
+        console.log(input);
     }
 </script>
 
@@ -69,6 +73,15 @@
         </ul>
     </div>
 
+    <div id="workoutDiv"> 
+        <ul class="heading">
+            <form action = "AllWorkouts.php" method = "post" style="padding:10px;">
+                <li><p><input type="text" name="search" size="40" placeholder="ex. Bench..."></p></li>
+                <li><p><button type="submit">Search</button></p></li>
+            </form>
+        </ul>
+    </div>
+
     <div>
         <?php
             $connection = new mysqli('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
@@ -77,8 +90,10 @@
                 echo "NOT CONNECTED";
             }
 
+            $search_val  = $_POST['search'];
+
             $data = [];
-            $sql = 'SELECT * FROM `Exercises`';
+            $sql = "CALL spExercise_Search('".strval($search_val)."')";
             $results = $connection->query($sql);
             if($results->num_rows > 0) {
                 while ($row = $results->fetch_assoc()) {
@@ -93,7 +108,7 @@
                         <h3 id="h3" ><?php echo $result['exerciseName'] ?></h3>
                         <p>
                             Main: <?php echo $result['mainMuscle'] ?><br>
-                            Second: <?php echo $result['secondMuscle'] ?>
+                            Second: <?php echo $result['secondMuscle'] ?><br>
                         </p>
                     </div>
             <?php endforeach; ?>
