@@ -36,7 +36,7 @@
     </a>
     <div id="titleDiv">
         <img id = "logo" src="../images/Logo.PNG" alt="Jim People Logo">
-        <h1 class="mainTitle"> Legsls
+        <h1 class="mainTitle"> Leg
             Workouts</h1>
     </div>
 
