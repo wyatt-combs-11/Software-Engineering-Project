@@ -30,6 +30,15 @@
 </script>
 
 <body>
+
+
+    <a>
+        <?php
+            if ($_SESSION["mode"] === '1') {
+                echo '<script>ColorChange();</script>';
+            }
+        ?>
+    </a>
     <div id="titleDiv">
         <img id = "logo" src="../images/Logo.PNG" alt="Jim People Logo">
         <h1 class="mainTitle"> Favorited Workouts</h1>

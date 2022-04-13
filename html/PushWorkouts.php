@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+        session_start();
+?>
+
 <head>
         <title> All Workouts </title>
         <script src="../jquery/jquery.js"></script>
@@ -23,6 +27,13 @@
 
 <body>
 
+    <a>
+        <?php
+            if ($_SESSION["mode"] === '1') {
+                echo '<script>ColorChange();</script>';
+            }
+        ?>
+    </a>
     <div id="titleDiv">
         <img id = "logo" src="../images/Logo.PNG" alt="Jim People Logo">
         <h1 class="mainTitle"> Push Workouts</h1>
