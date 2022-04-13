@@ -40,7 +40,7 @@
 
     <div id="workoutDiv"> 
         <ul class="heading">
-            <li><a href="JimBuddies.html">Home Page</a></li>
+            <li><a href="JimBuddies.php">Home Page</a></li>
             <li><a href="AllWorkouts.php">All Workouts</a></li>
             <li><a href="PushWorkouts.php">Push Workouts</a></li>
             <li><a href="PullWorkouts.php">Pull Workouts</a></li>

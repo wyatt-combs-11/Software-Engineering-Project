@@ -24,7 +24,7 @@
 
 <div id="workoutDiv">
     <ul>
-        <li><a href="./html/JimBuddies.html">Home Page</a></li>
+        <li><a href="./html/JimBuddies.php">Home Page</a></li>
         <li><a href="./html/AllWorkouts.php">All Workouts</a></li>
         <li><a href="./html/ChestWorkouts.php">Chest Workouts</a></li>
         <li><a href="./html/PullWorkouts.php">Pull Workouts</a></li>
