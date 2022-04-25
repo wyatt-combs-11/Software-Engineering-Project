@@ -48,6 +48,7 @@
             <li><a href="PullWorkouts.php">Pull Workouts</a></li>
             <li><a href="LegWorkouts.php">Leg Workouts</a></li>
             <li><a href="Favorites.php">Favorited Workouts</a></li>
+            <li><a href="Suggestions.php">Suggest a Workout</a></li>
             <li style=float:right> <a id= "login" href="../Login.php">
                 <b>
                     <?php 

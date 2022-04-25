@@ -47,6 +47,7 @@
             <li><a href="PullWorkouts.php">Pull Workouts</a></li>
             <li><a href="LegWorkouts.php">Leg Workouts</a></li>
             <li><a href="Favorites.php">Favorited Workouts</a></li>
+            <li><a href="Suggestions.php">Suggest a Workout</a></li>
             <li style=float:right><a href="../Login.php">Log In</a></li>
             <li style=float:right> <a href="../signup.php">Sign Up</a></li>
             <li id = "lightdarkTog" style=float:right><a onclick="ColorChange()">Toggle Light/Dark Mode</a></li>
