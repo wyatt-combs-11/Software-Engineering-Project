@@ -78,7 +78,7 @@ div.row:hover {
 
 div.card {
     background-color: rgb(133, 106, 165);
-    color:rgb(22, 22, 22);
+    color:white;
     border-radius: 5px;
     margin: 50px;
     width: 150px;
