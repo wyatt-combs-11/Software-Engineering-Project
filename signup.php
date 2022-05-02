@@ -11,7 +11,7 @@
 
 <div id="titleDiv">
     <img id = "logo" src="images/Logo.PNG" alt="Jim People Logo">
-    <h1 class="mainTitle"> Login</h1>
+    <h1 class="mainTitle"> Sign Up</h1>
 </div>
 
 <div id="workoutDiv">
@@ -30,9 +30,9 @@
 <form action = "signup.php" method = "post">
     <h2 style="padding-top: 25px;">Create an Account</h2>
     <label>Username:</label>
-    <input type="text" name="uname" placeholder="Username"><br>
+    <input type="text" name="uname" placeholder="Username" pattern="[a-zA-Z0-9]{4,}" title="Only include letters and numbers and be longer than 4 characters" required><br>
     <label>Password:</label>
-    <input type="password" name="psword" placeholder="Password"><br>
+    <input type="password" name="psword" placeholder="Password" pattern="[a-zA-Z0-9!@#$%^&*();:.,/]{8,}" title="Only include letters a-z and numbers 0-9 and Special Characters !@#$%^&*();:,/. Must be more than 8 characters" required><br>
     <label>Goals:</label>
     <input type="text" name="goals" placeholder="Goals"><br>
     <label>Age:</label>
