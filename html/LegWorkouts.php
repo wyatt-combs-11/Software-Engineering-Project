@@ -1,3 +1,22 @@
+<!--
+ * jQuery JavaScript Library v3.6.0
+ * https://jquery.com/
+ *
+ * Includes Sizzle.js
+ * https://sizzlejs.com/
+ *
+ * Copyright OpenJS Foundation and other contributors
+ * Released under the MIT license
+ * https://jquery.org/license
+ *
+ * Date: 2021-03-02T17:08Z
+
+ --JQuery used in lines 30 & 31
+
+ Leg Workouts
+ CSE201 Section C Group 7
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +24,7 @@
         session_start();
 ?>
 
+<!-- Website Setup (Tab title, CSS, charset, Script Definition) -->
 <head>
         <title> All Workouts </title>
         <script src="../jquery/jquery.js"></script>
@@ -13,6 +33,7 @@
         <meta charset="UTF-8">
 </head>
 
+<!-- Script to change between light/dark styling sheets -->
 <script>
 		
     function ColorChange() {
@@ -34,12 +55,15 @@
             }
         ?>
     </a>
+
+    <!-- Logo and upper page setup -->
     <div id="titleDiv">
         <img id = "logo" src="../images/Logo.PNG" alt="Jim People Logo">
         <h1 class="mainTitle"> Leg
             Workouts</h1>
     </div>
 
+    <!-- Heading creation and layout section -->
     <div id="workoutDiv"> 
         <ul class="heading">
             <li><a href="JimBuddies.php">Home Page</a></li>
@@ -49,7 +73,7 @@
             <li><a href="PullWorkouts.php">Pull Workouts</a></li>
             <li><a href="Favorites.php">Favorited Workouts</a></li>
             <li style=float:right> <a id= "login" href="../Login.php">
-                <b>
+                <b> <!-- Checking login dependent headers -->
                     <?php 
                         if ($_SESSION["loggedin"] === true) {
                             echo '<script>document.getElementById("login").href = "../logout.php";</script>';
@@ -71,10 +95,12 @@
         </ul>
     </div>
 
+    <!-- Populating the page with workouts -->
     <div>  
         <?php
             $connection = new mysqli('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
 
+            // Checks for positive database connection
             if ($connection -> connect_errno) {
                 echo "NOT CONNECTED";
             }
