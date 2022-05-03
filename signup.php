@@ -1,6 +1,12 @@
+<!--
+ Signup
+ CSE201 Section C Group 7
+-->
+
 <!DOCTYPE html>
 <html lang = en>
 
+<!-- Website Setup (Tab title, CSS, charset) -->
 <head>
     <title> Sign Up </title>
     <link rel="stylesheet" href="./css/baseWebsite.css">
@@ -9,11 +15,13 @@
 
 <body>
 
+<!-- Logo and upper page setup -->
 <div id="titleDiv">
     <img id = "logo" src="images/Logo.PNG" alt="Jim People Logo">
     <h1 class="mainTitle"> Sign Up</h1>
 </div>
 
+<!-- Heading creation and layout section -->
 <div id="workoutDiv">
     <ul>
         <li><a href="./html/JimBuddies.php">Home Page</a></li>
@@ -25,6 +33,7 @@
     </ul>
 </div>
 
+<!-- Signup card setup -->
 <div style="text-align:center">
 <div id="signupBox" class="menuCard" style="line-height: 50px;">
 <form action = "signup.php" method = "post">
