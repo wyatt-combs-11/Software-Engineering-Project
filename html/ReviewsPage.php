@@ -1,37 +1,16 @@
-<!--
- * jQuery JavaScript Library v3.6.0
- * https://jquery.com/
- *
- * Includes Sizzle.js
- * https://sizzlejs.com/
- *
- * Copyright OpenJS Foundation and other contributors
- * Released under the MIT license
- * https://jquery.org/license
- *
- * Date: 2021-03-02T17:08Z
-
- --JQuery used in lines 27 & 28
-
- All Workouts
- CSE201 Section C Group 7
--->
-
 <?php
         session_start();
 ?>
 <html lang="en">
 
-<!-- Website Setup (Tab title, CSS, charset, Script Definition) -->
 <head>
-        <title> All Workouts </title>
+        <title> Reviews </title>
         <script src="../jquery/jquery.js"></script>
         <script src="../js/AllWorkouts.js"></script>
         <link id="theme" rel="stylesheet" href="../css/baseWebsite.css">
         <meta charset="UTF-8">
 </head>
 
-<!-- Script to change between light/dark styling sheets -->
 <script>
     function ColorChange() {
         var theme = document.getElementsByTagName('link')[0];
@@ -40,10 +19,6 @@
         } else {
             theme.setAttribute('href', "../css/baseWebsite.css");
         }
-    }
-
-    function SearchExercises() {
-        var input = document.getElementById("search").value;
     }
 </script>
 
@@ -56,14 +31,11 @@
             }
         ?>
     </a>
-
-    <!-- Logo and upper page setup -->
     <div id="titleDiv">
         <img id = "logo" src="../images/Logo.PNG" alt="Jim People Logo">
-        <h1 class="mainTitle"> All Workouts</h1>
+        <h1 class="mainTitle"> Reviews</h1>
     </div>
 
-    <!-- Heading creation and layout section -->
     <div id="workoutDiv">
         <ul class="heading">
             <li><a href="JimBuddies.php">Home Page</a></li>
@@ -73,7 +45,7 @@
             <li><a href="LegWorkouts.php">Leg Workouts</a></li>
             <li><a href="Favorites.php">Favorited Workouts</a></li>
             <li style=float:right> <a id= "login" href="../Login.php">
-                <b> <!-- Checking login dependent headers -->
+                <b>
                     <?php
                         if ($_SESSION["loggedin"] === true) {
                             echo '<script>document.getElementById("login").href = "../logout.php";</script>';
@@ -95,16 +67,6 @@
         </ul>
     </div>
 
-    <div id="workoutDiv">
-        <ul class="heading">
-            <form action = "AllWorkouts.php" method = "post" style="padding:10px;">
-                <li><p><input type="text" name="search" size="40" placeholder="ex. Bench..."></p></li>
-                <li><p><button type="submit">Search</button></p></li>
-            </form>
-        </ul>
-    </div>
-
-    <!-- Populating the page with workouts -->
     <div>
         <?php
             $connection = new mysqli('aws-exercisedb.camvz480jeos.us-east-2.rds.amazonaws.com','JimPeople','Muscles201', 'exerciseDB');
@@ -113,48 +75,58 @@
                 echo "NOT CONNECTED";
             }
 
-            $userId = $_SESSION["id"] ?? null;
-            $exerciseId = $_POST["wId"] ?? null;
+            $user = $_SESSION["username"] ?? null;
+            $reviewId = $_POST["rId"] ?? null;
+            $replyText = $_POST["userReply"] ?? null;
 
-            if($userId != null && $exerciseId != null) {
-                $sql = "CALL sp_AddFavorite(".strval($userId).", ".strval($exerciseId).")";
+            if($user != null && $reviewId != null && $replyText != null) {
+                $sql = "CALL sp_AddComment('".$user."', ".$reviewId.", '".$replyText."')";
                 mysqli_query($connection, $sql);
             }
 
-            $search_val  = $_POST['search'];
-
-            $data = [];
-            $sql = "CALL spExercise_Search('".strval($search_val)."')";
+            $sql = "SELECT * FROM Reviews WHERE parentId IS NULL AND approved = TRUE";
             $results = $connection->query($sql);
-            if($results->num_rows > 0) {
-                while ($row = $results->fetch_assoc()) {
-                    $data[] = $row;
-                }
-            }
         ?>
 
         <table>
             <?php foreach($results as $result): ?>
-                    <div class="card row">
-                        <h3 id="h3" ><?php echo $result['exerciseName'] ?></h3>
-                        <p>
-                            Main: <?php echo $result['mainMuscle'] ?><br>
-                            Second: <?php echo $result['secondMuscle'] ?><br>
-                        </p>
-                        <form style="margin: 0px" action = "AllWorkouts.php" method = "post">
-                            <ul>
-                                <li><p style="margin: 5px 5px 5px 5px;"><button type="submit">Favorite</button></p></li>
-                                <li><?php echo "<input type='hidden' name='wId' value='".$result['exerciseId']."'>"?></li>
+                    <div class="comment">
+                        <h3 id="author" >Author: <?php echo $result['username'] ?></h3>
+                        <p style="margin: 5px;">
+                            Review: <?php echo $result['text'] ?><br>
+                            Replies:<br></p>
+                    <?php
+                    $sql = "SELECT * FROM Reviews r
+                            WHERE parentId = ".$result['reviewId']." AND approved = TRUE";
+                    $comments = $connection->query($sql);
+                    foreach($comments as $comment):
+                        echo '<div class="reply"><h3 id="author" >Author: '.$comment['username'].'</h3>'
+                        .'<p>'.strval($comment['text']).'</p></div>';
+                    endforeach;
+                    ?>
+                        <div class="reply">
+                            <ul style="background-color: lightgray;">
+                                <form style="margin: 0px" action = "ReviewsPage.php" method = "post">
+                                    <li><p style="margin: 5px 5px 5px 5px;"><input type="text" name="userReply" size="50" placeholder="Reply..."></p></li>
+                                    <li><p style="margin: 5px 5px 5px 5px;"><button type="submit">Reply</button></p></li>
+                                    <li><?php echo "<input type='hidden' name='rId' value='".$result['reviewId']."'>"?></li>
+                                </form>
                             </ul>
-                        </form>
+                        </div>
                     </div>
             <?php endforeach; ?>
+
+            <div class="comment" style="padding:5px; background-color: lightgray;">
+                <ul style="background-color: lightgray;">
+                    <form style="margin: 0px" action = "ReviewsPage.php" method = "post">
+                        <li><p style="margin: 5px 5px 5px 5px;"><input type="text" name="userReply" size="75" placeholder="Leave a Review..."></p></li>
+                        <li><p style="margin: 5px 5px 5px 5px;"><button type="submit">Comment</button></p></li>
+                        <li><?php echo "<input type='hidden' name='rId' value='0'>"?></li>
+                    </form>
+                </ul>
+            </div>
+
         </table>
     </div>
-
-
-
 </body>
-
-
 </html>
