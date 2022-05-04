@@ -37,7 +37,7 @@
         <li><a href="./html/ChestWorkouts.php">Chest Workouts</a></li>
         <li><a href="./html/PullWorkouts.php">Pull Workouts</a></li>
         <li><a href="./html/LegWorkouts.php">Leg Workouts</a></li>
-        <li><a href="ReviewsPage.php">Reviews</a></li>
+        <li><a href="./html/ReviewsPage.php">Reviews</a></li>
         <li style=float:right><a href="signup.php">Sign Up</a></li>
         <!-- <li style=float:right><a href="TESTLINK.com">Log In</a></li> -->
     </ul>
