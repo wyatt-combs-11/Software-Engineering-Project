@@ -72,6 +72,7 @@
             <li><a href="PushWorkouts.php">Push Workouts</a></li>
             <li><a href="PullWorkouts.php">Pull Workouts</a></li>
             <li><a href="Favorites.php">Favorited Workouts</a></li>
+            <li><a href="ReviewsPage.php">Reviews</a></li>
             <li style=float:right> <a id= "login" href="../Login.php">
                 <b> <!-- Checking login dependent headers -->
                     <?php 
