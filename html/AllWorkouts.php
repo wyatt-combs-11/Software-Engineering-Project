@@ -148,7 +148,13 @@
                     
                             <ul>
                                 <li><p style="margin: 5px 5px 5px 5px; ">
-                                <button style="margin-left: 35px;" type="submit">Favorite</button></p></li>
+                                    <?php
+                                        if ($_SESSION["loggedin"] === true) {
+                                            <button style="margin-left: 35px;" type="submit">Favorite</button></p></li>
+                                        } else {
+                                            <button style="margin-left: 35px;" type="submit" disabled>Favorite</button></p></li>
+                                        }
+                                    ?>
                                 <li><?php echo "<input type='hidden' name='wId' value='".$result['exerciseId']."'>"?></li>
                             </ul>
                         </form>
