@@ -144,7 +144,7 @@
                         </p>
                         <form style="margin: 0px" action = "AllWorkouts.php" method = "post">
                             <ul>
-                                <li><p style="margin: 5px auto 5px auto; "><button style="margin: 5px 5px 5px 5px" type="submit">Favorite</button></p></li>
+                                <li><p style="margin: 5px auto 5px auto; "><button style="margin: 5px 5px 5px 5px;" type="submit">Favorite</button></p></li>
                                 <li><?php echo "<input type='hidden' name='wId' value='".$result['exerciseId']."'>"?></li>
                             </ul>
                         </form>
