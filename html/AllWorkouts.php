@@ -145,12 +145,17 @@
                         </p>
                     </div>
                         <form style="margin: 0px" action = "AllWorkouts.php" method = "post">
-                    
-                            <ul>
-                                <li><p style="margin: 5px 5px 5px 5px; ">
-                                    <button style="margin-left: 35px;" type="submit">Favorite</button></p></li>
-                                <li><?php echo "<input type='hidden' name='wId' value='".$result['exerciseId']."'>"?></li>
-                            </ul>
+                            <b> <!-- Checking login dependent headers -->
+                            <?php
+                                if ($_SESSION["loggedin"] === true) {
+                                    <ul>
+                                        <li><p style="margin: 5px 5px 5px 5px; ">
+                                            <button style="margin-left: 35px;" type="submit">Favorite</button></p></li>
+                                        <li>
+                                        <?php echo "<input type='hidden' name='wId' value='".$result['exerciseId']."'>"?></li>
+                                    </ul>
+                                } else {}
+                            ?>
                         </form>
                     </div>
             <?php endforeach; ?>
