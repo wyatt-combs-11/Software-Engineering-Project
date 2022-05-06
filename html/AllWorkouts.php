@@ -137,14 +137,18 @@
         <table>
             <?php foreach($results as $result): ?>
                     <div class="card row">
+                    <div style="height: 150px;">
                         <h3 id="h3" ><?php echo $result['exerciseName'] ?></h3>
                         <p>
                             Main: <?php echo $result['mainMuscle'] ?><br>
                             Second: <?php echo $result['secondMuscle'] ?><br>
                         </p>
+                    </div>
                         <form style="margin: 0px" action = "AllWorkouts.php" method = "post">
+                    
                             <ul>
-                                <li><p style="margin: 5px auto 5px auto; "><button style="margin: 5px 5px 5px 5px;" type="submit">Favorite</button></p></li>
+                                <li><p style="margin: 5px 5px 5px 5px; ">
+                                <button style="margin-left: 35px;" type="submit">Favorite</button></p></li>
                                 <li><?php echo "<input type='hidden' name='wId' value='".$result['exerciseId']."'>"?></li>
                             </ul>
                         </form>
