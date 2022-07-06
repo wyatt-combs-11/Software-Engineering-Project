@@ -111,6 +111,30 @@ div.card {
     text-align: center;
   }
 
+  div.comment {
+  width: 70%;
+  font-size: 18px;
+  text-align: left;
+  padding: 5px 5px 20px 5px;
+  margin: 10px;
+  float: left;
+  background-color: lightblue;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+div.reply {
+  width: 90%;
+  font-size: 14px;
+  text-align: left;
+  padding: 5px;
+  margin: 0px 0px 0px 20px;
+  float: left;
+  background-color: lightgray;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
   div.menuCard {
     background-color: lightblue;
     color:black;
