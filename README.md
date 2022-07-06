@@ -1,5 +1,8 @@
 # Intro to Software Engineering Project
 
+## Preface
+For best experience, please check out the Group 7 Final Project Submission document. Also please disregard the unprofessional commit names of my peers.
+
 ## Description
 This project was meant to host a catalog of exercises with properties such as main muscle and PPL value (Push, Pull, or Legs). These exercises could be searched, filtered, and favorited (if logged in). It supports login/logout/signup functionality. Most of my portion centered about backend where I created the search bar and filtering in MySQL, login/logout/signup, and comment section. I designed the class and ERD diagrams, created and populated the database I hosted on AWS, created stored procedures and called them within php files, and helped with burndown charts and state diagrams. Some of the diagrams are documented in the project submission file.
 
